@@ -18,18 +18,21 @@ body {
     width:100vw;
 }
 
-$w: 60px;
+// base element size
+$w: 64px;
 $h:$w;
 
-$element-spacing:2px;
+$element-spacing:3px;
 
-$period-group-size:30px;
+// width/height of period/group bars
+$period-group-size:26px;
 
-$table-wrapper-width:1500px;
-$table-wrapper-height:1000px;
+$table-wrapper-width:1400px;
+$table-wrapper-height:1100px;
 
 $table-width:($w*18)+($element-spacing*17);
-$table-height:($h*8)+($element-spacing*7);
+$table-height:($h*11)+($element-spacing*10);
+$table-actual-height:($h*8)+($element-spacing*7);
 
 
 
@@ -64,10 +67,10 @@ $table-height:($h*8)+($element-spacing*7);
 
         .ptable-periods {
             position: absolute;
-            // top: ($table_wrapper_height - $table_height)/2 - $period_group_size;
+            top: ($table_wrapper_height - $table_height)/2 - $period_group_size;
             left: 0;
             width:100%;
-            height: $table-height;
+            height: $table-actual-height;
             background: rgb(219, 117, 0);
         }
     }
@@ -83,7 +86,7 @@ $table-height:($h*8)+($element-spacing*7);
         .ptable-groups {
             position: absolute;
             top: 0;
-            // left: ($table_wrapper_width - $table_width)/2 - $period_group_size;
+            left: ($table_wrapper_width - $table_width)/2 - $period_group_size;
             height:100%;
             width:$table-width;
             background: rgb(219, 117, 0);
