@@ -1,0 +1,44 @@
+///////////////////////
+//// ptable grid main
+
+// base element size
+$h: 70px;
+$w:$h;
+
+$element-spacing:2px;
+
+// width/height of period/group bars
+$period-group-size:26px;
+
+$table-wrapper-width:1500px;
+$table-wrapper-height:1100px;
+
+$table-width:($w*18)+($element-spacing*17);
+$table-height:($h*11)+($element-spacing*10); //8 periods
+$table-actual-height:($h*8)+($element-spacing*7); //full grid
+
+///////////////////////////
+//// single element
+
+$base: 10; //(do not change)
+//calculates all lengths based on the parent element's height
+$size: ($base/60)*$h; //(do not change)
+
+// $h   ->  $base
+// 60   ->  10
+// 1    ->  10/60
+// 200  ->  (10/60)*200
+
+//can be changed (required_value/10):
+//eg: 22px  ->  2.2
+$element__bg-color:rgba(0, 0, 0, 0.048);
+$element__radioactive_bg-color: rgb(190, 191, 211);
+$element__text-color: rgb(224, 224, 224);
+
+$element__size-atomic-num: 1.2;
+$element__size-radioactive-dot: .5;
+
+$element__size-symbol: 1.8;
+
+$element__size-name: 1.1;
+//can add other variables as well... check in th scss file

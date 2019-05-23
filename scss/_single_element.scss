@@ -1,0 +1,63 @@
+// here all the values have been converted and expressed 
+// as a ratio of base size which is $base = 10
+//and the net base size is calculated on the basis of height of the parent container
+// which in our case is ptable-element-wrapper having default height of 60px 
+// stored in $h
+//on the basis of $h, $size is calculated using ($base/60)*$h
+
+.ptable-element {
+    height: $size * 6;
+    width: $size * 6;
+    background: $element__bg-color;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: $size * .25 solid rgb(216, 13, 13);
+    color: $element__text-color;
+    border-radius: $size * .1;
+    padding: $size*.5 $size*.3;
+
+
+    &__top-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+        margin-bottom: auto;
+
+        .ptable-element__atomic-num {
+            font-size: $size * $element__size-atomic-num;
+        }
+
+        .ptable-element__radioactive {
+            height: $size * $element__size-radioactive-dot;
+            width: $size * $element__size-radioactive-dot;
+            border-radius: $size * 9.9;
+            background: $element__radioactive_bg-color;
+            position: absolute;
+            top: $size * .4;
+            right: $size * .4;
+        }
+    }
+
+    &__element-symbol {
+        font-size: $size * $element__size-symbol;
+        line-height: .8;
+        margin-bottom: $size * .3;
+    }
+
+    &__element-name {
+        font-size: $size * $element__size-name;
+        font-weight: 400;
+        padding: 0 $size * .3;
+        text-align: center;
+        white-space: nowrap;
+        align-self: stretch;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+    }
+}

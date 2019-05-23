@@ -1,3 +1,6 @@
+@import "var";
+@import "single_element";
+
 *,
 *::before,
 *::after {
@@ -13,49 +16,41 @@ html {
 body {
     box-sizing: inherit;
     font-family: Arial, Helvetica, sans-serif;
-    background: #089b2c;
+    background: #1d1c22;
     height: 100vh;
-    width:100vw;
+    width: 100vw;
 }
 
-// base element size
-$w: 64px;
-$h:$w;
-
-$element-spacing:3px;
-
-// width/height of period/group bars
-$period-group-size:26px;
-
-$table-wrapper-width:1400px;
-$table-wrapper-height:1100px;
-
-$table-width:($w*18)+($element-spacing*17);
-$table-height:($h*11)+($element-spacing*10);
-$table-actual-height:($h*8)+($element-spacing*7);
-
-
-
-
-.main-wrapper{
-    position:relative;
+.main-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
 .ptable-wrapper {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     overflow: auto;
     width: 100vw;
     height: 100vh;
-    
+
+    .filler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $period-group-size;
+        width: $period-group-size;
+        background: rgb(81, 81, 102);
+        z-index: 100;
+    }
+
     .ptable-groups-wrapper,
     .ptable-periods-wrapper {
         position: absolute;
         background: rgb(81, 81, 102);
         overflow: hidden;
+        
     }
 
     .ptable-periods-wrapper {
@@ -63,15 +58,30 @@ $table-actual-height:($h*8)+($element-spacing*7);
         left: 0;
         height: calc(100% - #{$period-group-size});
         width: $period-group-size;
+        box-shadow: 2px 0 4px rgba(0,0,0,0.2);
         z-index: 100;
 
         .ptable-periods {
             position: absolute;
             top: ($table_wrapper_height - $table_height)/2 - $period_group_size;
             left: 0;
-            width:100%;
+            width: 100%;
             height: $table-actual-height;
-            background: rgb(219, 117, 0);
+            background: rgb(42, 42, 47);
+            display: flex;
+            flex-direction: column;
+
+            .period {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+
+                &:nth-child(even) {
+                    background: rgb(25, 26, 29);
+                }
+            }
         }
     }
 
@@ -81,15 +91,30 @@ $table-actual-height:($h*8)+($element-spacing*7);
         width: calc(100% - #{$period-group-size});
         right: 0;
         height: $period-group-size;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         z-index: 100;
 
         .ptable-groups {
             position: absolute;
             top: 0;
             left: ($table_wrapper_width - $table_width)/2 - $period_group_size;
-            height:100%;
-            width:$table-width;
-            background: rgb(219, 117, 0);
+            height: 100%;
+            width: $table-width;
+            background: rgb(42, 42, 47);
+            display: flex;
+            color: #fff;
+
+            .group {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+
+                &:nth-child(even) {
+                    background: rgb(25, 26, 29);
+                }
+            }
         }
     }
 
@@ -109,40 +134,35 @@ $table-actual-height:($h*8)+($element-spacing*7);
             justify-content: center;
             cursor: grab;
 
-            &:active{
-                cursor:grabbing;
+            &:active {
+                cursor: grabbing;
             }
 
 
             .ptable {
-                // width: $table-width;
-                // height: $table-height;
-                background: rgb(71, 71, 97);
-                color:rgb(209, 209, 209);
+                // background: rgb(71, 71, 97);
+                color: rgb(209, 209, 209);
                 display: flex;
                 flex-direction: column;
                 /* transform: scale(1.5) */
 
-                // .aaa{
-                //     width:50px;
-                //     height:50px;
-                //     background: #0021dd;
-                // }
-
-                &-row{
-                    height:$h;
+                &-row {
+                    height: $h;
                     display: flex;
-                    &:not(:last-child){
-                        margin-bottom:$element-spacing;
+
+                    &:not(:last-child) {
+                        margin-bottom: $element-spacing;
                     }
                 }
 
-                &-element{
-                    height:$h;
-                    width:$w;
-                    background:rgb(47, 47, 63);
-                    &:not(:last-child){
-                        margin-right:$element-spacing;
+                &-element-wrapper {
+                    position: relative;
+                    height: $h;
+                    width: $w;
+                    // background: rgb(47, 47, 63);
+
+                    &:not(:last-child) {
+                        margin-right: $element-spacing;
                     }
                 }
             }
