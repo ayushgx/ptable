@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PTble - Interactive Periodic Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/1style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/simplebar.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+  <!-- for loading different js files based on different device (touch/non-touch screen) -->
+  <script src="js/main.js"></script>
+  <script src="js/simplebar.min.js"></script>
+
+  <script src='https://unpkg.com/scrollbooster@1.0.4/dist/scrollbooster.min.js'></script>
+
+</head>
+
+<body>
+  <!-- contains sections search nav, left nav, footer, main ptable  -->
+  <div class="main-wrapper">
+
+    <!-- ptable starts here -->
+    <div class="ptable-wrapper">
+
+      <!-- groups(horizontal) and periods(vertical) -->
+      <div class="ptable-periods-wrapper">
+        <!-- periods going here -->
+        <div class="ptable-periods">Pe</div>
+      </div>
+      <div class="ptable-groups-wrapper">
+        <!-- groups going here -->
+        <div class="ptable-groups">Gr</div>
+      </div>
+
+      <!-- uses data-simplebar -->
+      <!-- wrapper of ptable_holder + actual_ptable(grid) -->
+      <div class="ptable-wrapper__ptable" data-simplebar>
+        <!-- ptable holder -->
+        <div class="inner-scroll-wrapper">
+
+          <!-- periodic table starts herer -->
+          <div class="ptable">
+
+            <!-- data inserted by js -->
+
+          </div>
+          <!-- ptable main ends -->
+        </div>
+        <!-- inner scroll wrapper ends -->
+      </div>
+      <!-- ptable wrapper ends -->
+    </div>
+    <!-- ptable main wrapper ends -->
+
+    <!-- sdditional code from search, left-nav...etc -->
+
+  </div>
+
+
+</body>
+
+</html>
