@@ -16,7 +16,7 @@ html {
 body {
     box-sizing: inherit;
     font-family: Arial, Helvetica, sans-serif;
-    background: #1d1c22;
+    background: $table-background;
     height: 100vh;
     width: 100vw;
 }
@@ -35,39 +35,39 @@ body {
     width: 100vw;
     height: 100vh;
 
+    //small cube to fill top right corner
     .filler {
         position: absolute;
         top: 0;
         left: 0;
-        height: $period-group-size;
-        width: $period-group-size;
-        background: rgb(81, 81, 102);
+        height: $period-group-thickness;
+        width: $period-group-thickness;
+        background: $priod-grup-base-bg;
         z-index: 100;
     }
 
     .ptable-groups-wrapper,
     .ptable-periods-wrapper {
         position: absolute;
-        background: rgb(81, 81, 102);
+        background: $priod-grup-base-bg;
         overflow: hidden;
-        
+
     }
 
     .ptable-periods-wrapper {
         bottom: 0;
         left: 0;
-        height: calc(100% - #{$period-group-size});
-        width: $period-group-size;
-        box-shadow: 2px 0 4px rgba(0,0,0,0.2);
+        height: calc(100% - #{$period-group-thickness});
+        width: $period-group-thickness;
+        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
         z-index: 100;
 
         .ptable-periods {
             position: absolute;
-            top: ($table_wrapper_height - $table_height)/2 - $period_group_size;
+            top: ($table_wrapper_height - $table_height)/2 - $period-group-thickness;
             left: 0;
             width: 100%;
             height: $table-actual-height;
-            background: rgb(42, 42, 47);
             display: flex;
             flex-direction: column;
 
@@ -78,8 +78,11 @@ body {
                 justify-content: center;
                 color: #fff;
 
+                &:nth-child(odd) {
+                    background: $period-group-content-odd-bg;
+                }
                 &:nth-child(even) {
-                    background: rgb(25, 26, 29);
+                    background: $period-group-content-even-bg;
                 }
             }
         }
@@ -88,19 +91,18 @@ body {
     .ptable-groups-wrapper {
         top: 0;
         right: 0;
-        width: calc(100% - #{$period-group-size});
+        width: calc(100% - #{$period-group-thickness});
         right: 0;
-        height: $period-group-size;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        height: $period-group-thickness;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         z-index: 100;
 
         .ptable-groups {
             position: absolute;
             top: 0;
-            left: ($table_wrapper_width - $table_width)/2 - $period_group_size;
+            left: ($table_wrapper_width - $table_width)/2 - $period_group_thickness;
             height: 100%;
             width: $table-width;
-            background: rgb(42, 42, 47);
             display: flex;
             color: #fff;
 
@@ -111,8 +113,11 @@ body {
                 justify-content: center;
                 flex: 1;
 
+                &:nth-child(odd) {
+                    background: $period-group-content-odd-bg;
+                }
                 &:nth-child(even) {
-                    background: rgb(25, 26, 29);
+                    background: $period-group-content-even-bg;
                 }
             }
         }
@@ -126,7 +131,7 @@ body {
 
 
         .inner-scroll-wrapper {
-            background: #1d1c22;
+            background: $table-background;
             width: $table-wrapper-width;
             height: $table-wrapper-height;
             display: flex;
@@ -140,14 +145,14 @@ body {
 
 
             .ptable {
-                // background: rgb(71, 71, 97);
-                color: rgb(209, 209, 209);
+                background: $table-grid-background;
+                color: $element__text-color;
                 display: flex;
                 flex-direction: column;
                 /* transform: scale(1.5) */
 
                 &-row {
-                    height: $h;
+                    height: $element_height;
                     display: flex;
 
                     &:not(:last-child) {
@@ -157,9 +162,8 @@ body {
 
                 &-element-wrapper {
                     position: relative;
-                    height: $h;
-                    width: $w;
-                    // background: rgb(47, 47, 63);
+                    height: $element_height;
+                    width: $element_width;
 
                     &:not(:last-child) {
                         margin-right: $element-spacing;

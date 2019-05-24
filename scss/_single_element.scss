@@ -2,8 +2,8 @@
 // as a ratio of base size which is $base = 10
 //and the net base size is calculated on the basis of height of the parent container
 // which in our case is ptable-element-wrapper having default height of 60px 
-// stored in $h
-//on the basis of $h, $size is calculated using ($base/60)*$h
+// stored in $element_height
+//on the basis of $element_height, $size is calculated using ($base/60)*$element_height
 
 .ptable-element {
     height: $size * 6;
@@ -41,6 +41,11 @@
             position: absolute;
             top: $size * .4;
             right: $size * .4;
+            display: none;
+
+            &.show{
+                display: block !important;
+            }
         }
     }
 

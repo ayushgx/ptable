@@ -23,7 +23,7 @@ $(document).ready(function () {
     bounceForce: .1,
     textSelection: false,
     friction: 0.14,
-    emulateScroll: false,
+    emulateScroll: true,
 
     onUpdate: function (data) {
 
