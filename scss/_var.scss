@@ -1,16 +1,16 @@
 ////////////////////
 //// ptable
-$table-background:#44424b;
+$table-background:#514e5f;
 $inner-scroll-wrapper:$table-background;
-
-
 
 /////////////////////////
 //// periods/groups bar
-$period-group-thickness:26px; 
-$priod-grup-base-bg:rgb(45, 45, 48);
-$period-group-content-odd-bg:rgb(40, 40, 53);
-$period-group-content-even-bg:rgb(30, 30, 34);
+$period-group__thickness:26px; 
+$priod-grup__base-bg:rgb(23, 23, 24);
+$period-group__content--odd-bg:rgb(47, 47, 66);
+$period-group__content--even-bg:rgb(23, 23, 24);
+$period-group__period-shadow:2px 0 4px rgba(0, 0, 0, 0.2);
+$period-group__group-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
 
 ///////////////////////
 //// ptable grid main
@@ -18,40 +18,38 @@ $table-grid-background:transparent;
 $table-text-color: rgb(239, 240, 245);
 
 // base element size
-$element_height: 60px;
-$element_width: $element_height;
+$table-element_height: 60px;
+$table-element_width: $table-element_height;
 
-$element-spacing:2px;
+$table-element-spacing:4px;
 
 $table-wrapper-width:1300px;
 $table-wrapper-height:900px;
 
-$table-width:($element_width*18)+($element-spacing*17);
-$table-height:($element_height*11)+($element-spacing*10); //8 periods
-$table-actual-height:($element_height*8)+($element-spacing*7); //full grid
+$table-width:($table-element_width*18)+($table-element-spacing*17);
+$table-height:($table-element_height*11)+($table-element-spacing*10); //8 periods
+$table-actual-height:($table-element_height*8)+($table-element-spacing*7); //full grid
 
 ///////////////////////////
 //// single element
 
 $base: 10; //(do not change)
 //calculates all lengths based on the parent element's height
-$size: ($base/60)*$element_height; //(do not change)
+$size: ($base/60)*$table-element_height; //(do not change)
 
-// $element_height  ->  $base
-// 60               ->  10
-// 1                ->  10/60
-// 200              ->  (10/60)*200
+// $table-element_height->  $base
+// 60                   ->  10
+// 1                    ->  10/60
+// 200                  ->  (10/60)*200
 
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
-$element__bg-color:rgba(27, 26, 32, 0.548);
-$element__radioactive_bg-color: rgb(190, 191, 211);
-$element__text-color: rgb(239, 240, 245);
+$table-element__bg-color:rgba(18, 18, 20, 0.548);
+$table-element__radioactive_bg-color: rgb(211, 212, 226);
+$table-element__text-color: rgb(224, 224, 224);
 
-$element__size-atomic-num: 1.2;
-$element__size-radioactive-dot: .5;
-
-$element__size-symbol: 1.8;
-
-$element__size-name: 1.1;
+$table-element__size-atomic-num: 1.2;
+$table-element__size-radioactive-dot: .5;
+$table-element__size-symbol: 1.8;
+$table-element__size-name: 1.1;
 //can add other variables as well... check in th scss file

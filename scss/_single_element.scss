@@ -8,7 +8,7 @@
 .ptable-element {
     height: $size * 6;
     width: $size * 6;
-    background: $element__bg-color;
+    background: $table-element__bg-color;
     box-sizing: border-box;
     position: absolute;
     display: flex;
@@ -17,11 +17,54 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-bottom: $size * .25 solid rgb(216, 13, 13);
-    color: $element__text-color;
+    color: $table-element__text-color;
     border-radius: $size * .2;
     padding: $size*.5 $size*.3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
 
+    &.A {
+        border-bottom: $size * .25 solid rgb(241, 83, 35);
+    }
+
+    &.B {
+        border-bottom: $size * .25 solid rgb(0, 150, 219);
+    }
+
+    &.C {
+        border-bottom: $size * .25 solid rgb(192, 141, 0);
+    }
+
+    &.D {
+        border-bottom: $size * .25 solid rgb(30, 89, 167);
+    }
+
+    &.E {
+        border-bottom: $size * .25 solid rgb(192, 27, 27);
+    }
+
+    &.G {
+        border-bottom: $size * .25 solid rgb(212, 200, 22);
+    }
+
+    &.H {
+        border-bottom: $size * .25 solid rgb(75, 170, 15);
+    }
+
+    &.I {
+        border-bottom: $size * .25 solid rgb(212, 0, 249);
+    }
+
+    &.J {
+        border-bottom: $size * .25 solid rgb(0, 124, 58);
+    }
+
+    &.K {
+        border-bottom: $size * .25 solid rgb(180, 64, 64);
+    }
+
+    &.L {
+        border-bottom: $size * .25 solid rgb(0, 180, 156);
+    }
 
     &__top-wrapper {
         display: flex;
@@ -30,33 +73,33 @@
         margin-bottom: auto;
 
         .ptable-element__atomic-num {
-            font-size: $size * $element__size-atomic-num;
+            font-size: $size * $table-element__size-atomic-num;
         }
 
         .ptable-element__radioactive {
-            height: $size * $element__size-radioactive-dot;
-            width: $size * $element__size-radioactive-dot;
+            height: $size * $table-element__size-radioactive-dot;
+            width: $size * $table-element__size-radioactive-dot;
             border-radius: $size * 9.9;
-            background: $element__radioactive_bg-color;
+            background: $table-element__radioactive_bg-color;
             position: absolute;
             top: $size * .4;
             right: $size * .4;
             display: none;
 
-            &.show{
+            &.show {
                 display: block !important;
             }
         }
     }
 
     &__element-symbol {
-        font-size: $size * $element__size-symbol;
+        font-size: $table-element__size-symbol;
         line-height: .8;
-        margin-bottom: $size * .3;
+        margin-bottom: $size * .4;
     }
 
     &__element-name {
-        font-size: $size * $element__size-name;
+        font-size: $table-element__size-name;
         font-weight: 400;
         padding: 0 $size * .3;
         text-align: center;

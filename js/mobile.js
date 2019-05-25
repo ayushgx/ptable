@@ -21,8 +21,10 @@ $(document).ready(function () {
         groups.style.left = (ptableOffsetLeft - period_group_size) + "px";
         periods.style.top = (ptableOffsetTop - period_group_size) + "px";
     })
-
-    $('.aaa').click(function () {
-        alert('yoyoyoyoyoyoyoyo');
+    //in mobile we do not use scrollbooster therefore, we do not need special click function
+    $('.ptable-element-wrapper').each(function (index, obj) {
+        $(this).find('.ptable-element').click(function () {
+            alert($(this).find('.ptable-element__element-name').text());
+        })
     })
 })

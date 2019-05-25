@@ -40,16 +40,16 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        height: $period-group-thickness;
-        width: $period-group-thickness;
-        background: $priod-grup-base-bg;
+        height: $period-group__thickness;
+        width: $period-group__thickness;
+        background: $priod-grup__base-bg;
         z-index: 100;
     }
 
     .ptable-groups-wrapper,
     .ptable-periods-wrapper {
         position: absolute;
-        background: $priod-grup-base-bg;
+        background: $priod-grup__base-bg;
         overflow: hidden;
 
     }
@@ -57,14 +57,14 @@ body {
     .ptable-periods-wrapper {
         bottom: 0;
         left: 0;
-        height: calc(100% - #{$period-group-thickness});
-        width: $period-group-thickness;
-        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+        height: calc(100% - #{$period-group__thickness});
+        width: $period-group__thickness;
+        box-shadow: $period-group__period-shadow;
         z-index: 100;
 
         .ptable-periods {
             position: absolute;
-            top: ($table_wrapper_height - $table_height)/2 - $period-group-thickness;
+            top: ($table_wrapper_height - $table_height)/2 - $period-group__thickness;
             left: 0;
             width: 100%;
             height: $table-actual-height;
@@ -79,10 +79,10 @@ body {
                 color: #fff;
 
                 &:nth-child(odd) {
-                    background: $period-group-content-odd-bg;
+                    background: $period-group__content--odd-bg;
                 }
                 &:nth-child(even) {
-                    background: $period-group-content-even-bg;
+                    background: $period-group__content--even-bg;
                 }
             }
         }
@@ -91,16 +91,16 @@ body {
     .ptable-groups-wrapper {
         top: 0;
         right: 0;
-        width: calc(100% - #{$period-group-thickness});
+        width: calc(100% - #{$period-group__thickness});
         right: 0;
-        height: $period-group-thickness;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        height: $period-group__thickness;
+        box-shadow: $period-group__group-shadow;
         z-index: 100;
 
         .ptable-groups {
             position: absolute;
             top: 0;
-            left: ($table_wrapper_width - $table_width)/2 - $period_group_thickness;
+            left: ($table-wrapper-width - $table-width)/2 - $period-group__thickness;
             height: 100%;
             width: $table-width;
             display: flex;
@@ -114,10 +114,10 @@ body {
                 flex: 1;
 
                 &:nth-child(odd) {
-                    background: $period-group-content-odd-bg;
+                    background: $period-group__content--odd-bg;
                 }
                 &:nth-child(even) {
-                    background: $period-group-content-even-bg;
+                    background: $period-group__content--even-bg;
                 }
             }
         }
@@ -146,28 +146,28 @@ body {
 
             .ptable {
                 background: $table-grid-background;
-                color: $element__text-color;
+                color: $table-element__text-color;
                 display: flex;
                 flex-direction: column;
                 /* transform: scale(1.5) */
 
                 &-row {
-                    height: $element_height;
+                    height: $table-element_height;
                     display: flex;
 
                     &:not(:last-child) {
-                        margin-bottom: $element-spacing;
+                        margin-bottom: $table-element-spacing;
                     }
                 }
 
                 &-element-wrapper {
                     position: relative;
-                    height: $element_height;
-                    width: $element_width;
+                    height: $table-element_height;
+                    width: $table-element_width;
                     opacity: 0;
 
                     &:not(:last-child) {
-                        margin-right: $element-spacing;
+                        margin-right: $table-element-spacing;
                     }
                 }
             }
