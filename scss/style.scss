@@ -164,6 +164,7 @@ body {
                     position: relative;
                     height: $element_height;
                     width: $element_width;
+                    opacity: 0;
 
                     &:not(:last-child) {
                         margin-right: $element-spacing;

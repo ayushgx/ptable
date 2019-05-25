@@ -1,6 +1,6 @@
 ////////////////////
 //// ptable
-$table-background:#1d1c22;
+$table-background:#44424b;
 $inner-scroll-wrapper:$table-background;
 
 
@@ -8,9 +8,9 @@ $inner-scroll-wrapper:$table-background;
 /////////////////////////
 //// periods/groups bar
 $period-group-thickness:26px; 
-$priod-grup-base-bg:rgb(81, 81, 102);
-$period-group-content-odd-bg:rgb(42, 42, 47);
-$period-group-content-even-bg:rgb(25, 26, 29);
+$priod-grup-base-bg:rgb(45, 45, 48);
+$period-group-content-odd-bg:rgb(40, 40, 53);
+$period-group-content-even-bg:rgb(30, 30, 34);
 
 ///////////////////////
 //// ptable grid main
@@ -18,13 +18,13 @@ $table-grid-background:transparent;
 $table-text-color: rgb(239, 240, 245);
 
 // base element size
-$element_height: 70px;
+$element_height: 60px;
 $element_width: $element_height;
 
 $element-spacing:2px;
 
-$table-wrapper-width:1500px;
-$table-wrapper-height:1100px;
+$table-wrapper-width:1300px;
+$table-wrapper-height:900px;
 
 $table-width:($element_width*18)+($element-spacing*17);
 $table-height:($element_height*11)+($element-spacing*10); //8 periods
@@ -44,7 +44,7 @@ $size: ($base/60)*$element_height; //(do not change)
 
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
-$element__bg-color:rgba(0, 0, 0, 0.15);
+$element__bg-color:rgba(27, 26, 32, 0.548);
 $element__radioactive_bg-color: rgb(190, 191, 211);
 $element__text-color: rgb(239, 240, 245);
 
