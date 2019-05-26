@@ -40,11 +40,39 @@ body {
     height:$top-bar__height;
     width:100%;
     position:absolute;
-    padding:0 24px;
+    padding:0 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     top:0;
     left:0;
+
+
+    .title{
+        font-size:18px;
+        display: flex;
+        align-items: center;
+
+        .logo-box{
+            width:32px;
+            height:32px;
+            border-radius: 99px;
+            background: url('/img/logo.png'), #fff;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 28px;
+            margin-right:10px;
+        }
+    }
+    .credits{
+        font-size:14px;
+        color:rgb(172, 173, 175);
+    }
+    a{
+        text-decoration: none;
+        margin-left:2px;
+        color: inherit;
+    }
 
 }
 .ptable-wrapper {
