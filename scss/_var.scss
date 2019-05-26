@@ -1,6 +1,6 @@
 ////////////////////
 //// ptable
-$table-background:#514e5f;
+$table-background:#555261;
 $inner-scroll-wrapper:$table-background;
 
 /////////////////////////
@@ -15,7 +15,7 @@ $period-group__group-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
 ///////////////////////
 //// ptable grid main
 $table-grid-background:transparent;
-$table-text-color: rgb(239, 240, 245);
+$table-text-color: rgb(255, 255, 255);
 
 // base element size
 $table-element_height: 60px;
@@ -44,7 +44,7 @@ $size: ($base/60)*$table-element_height; //(do not change)
 
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
-$table-element__bg-color:rgba(18, 18, 20, 0.548);
+$table-element__bg-color:rgb(42, 42, 58);
 $table-element__radioactive_bg-color: rgb(211, 212, 226);
 $table-element__text-color: rgb(224, 224, 224);
 
@@ -52,4 +52,8 @@ $table-element__size-atomic-num: 1.2;
 $table-element__size-radioactive-dot: .5;
 $table-element__size-symbol: 1.8;
 $table-element__size-name: 1.1;
+
+$table-element__size-special-range:1.2;
+$table-element__size-special-label:1.24;
+$table-element__size-special-bg:rgba(5, 2, 29, 0.233);
 //can add other variables as well... check in th scss file

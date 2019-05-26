@@ -14,13 +14,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: $table-element__text-color;
     border-radius: $size * .2;
     padding: $size*.5 $size*.3;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
+
+    &.special_container {
+        background: $table-element__size-special-bg;
+        padding: $size*.6 $size*.5;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .range {
+            font-size: $size * $table-element__size-special-range;
+        }
+        .label {
+            font-size: $size * $table-element__size-special-label;
+            margin-top: $size * .4;
+        }
+    }
 
     &.A {
         border-bottom: $size * .25 solid rgb(241, 83, 35);
@@ -93,13 +107,13 @@
     }
 
     &__element-symbol {
-        font-size: $table-element__size-symbol;
+        font-size: $size * $table-element__size-symbol;
         line-height: .8;
         margin-bottom: $size * .4;
     }
 
     &__element-name {
-        font-size: $table-element__size-name;
+        font-size: $size * $table-element__size-name;
         font-weight: 400;
         padding: 0 $size * .3;
         text-align: center;
