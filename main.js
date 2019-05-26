@@ -19,6 +19,4 @@ $(document).ready(function () {
   for(i=1;i<=18;i++) $('.ptable-groups').append('<div class="group">'+i+'</div>');
   for(i=1;i<=8;i++) $('.ptable-periods').append('<div class="period">'+i+'</div>');  
 
-  $('.top-bar').ripple();
-
 })

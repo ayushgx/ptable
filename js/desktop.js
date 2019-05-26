@@ -6,6 +6,7 @@ $(document).ready(function () {
   var periods = document.querySelector(".ptable-periods");
 
   var period_group_size = $('.ptable-groups-wrapper').height();
+  var top_bar_height = $('.top-bar').height();
 
   var ptable_grid = $('.ptable');
   offset = ptable_grid.offset()
@@ -34,10 +35,11 @@ $(document).ready(function () {
       ptableOffsetLeft = offset.left - $(document).scrollLeft();
 
       groups.style.left = (ptableOffsetLeft - period_group_size) + "px";
-      periods.style.top = (ptableOffsetTop - period_group_size) + "px";
+      periods.style.top = (ptableOffsetTop - period_group_size - top_bar_height) + "px";
 
     },
   });
+
 
   //prevent click while dragging ptable
   //idea is to find initial and final position of mouse during mousedown and mouseup events;
@@ -56,7 +58,7 @@ $(document).ready(function () {
       y2 = e.pageY;
       // console.log('diff', 'x', Math.abs(x1 - x2), 'y', Math.abs(y1 - y2))
       if (Math.abs(x1 - x2) <= drag_click_threshold && Math.abs(y1 - y2) <= drag_click_threshold) {
-        alert($(this).find('.ptable-element__element-name').text());
+        // alert($(this).find('.ptable-element__element-name').text());
       }
     })
   })

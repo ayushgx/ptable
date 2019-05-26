@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     var groups = document.querySelector(".ptable-groups");
     var periods = document.querySelector(".ptable-periods");
+    var top_bar_height = $('.top-bar').height();
+
 
     var period_group_size = $('.ptable-groups-wrapper').height();
 
@@ -19,12 +21,12 @@ $(document).ready(function () {
         ptableOffsetLeft = offset.left - $(document).scrollLeft();
 
         groups.style.left = (ptableOffsetLeft - period_group_size) + "px";
-        periods.style.top = (ptableOffsetTop - period_group_size) + "px";
+        periods.style.top = (ptableOffsetTop - period_group_size - top_bar_height) + "px";
     })
     //in mobile we do not use scrollbooster therefore, we do not need special click function
     $('.ptable-element-wrapper').each(function (index, obj) {
         $(this).find('.ptable-element').click(function () {
-            alert($(this).find('.ptable-element__element-name').text());
+            // alert($(this).find('.ptable-element__element-name').text());
         })
     })
 })

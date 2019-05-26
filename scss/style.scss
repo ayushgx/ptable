@@ -17,23 +17,43 @@ body {
     box-sizing: inherit;
     font-family: Arial, Helvetica, sans-serif;
     background: $table-background;
+    color:#fff;
     height: 100vh;
     width: 100vw;
 }
+
+// demo code to customise ripple effect
+// .container .legitRipple-ripple {
+//     background: yellow;
+//     /* You can change the transition properties too!
+//        Just don't try and change the width transition's easing. */
+//     transition-duration: .15s, .9s; /*width, opacity*/
+// }
 
 .main-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
 }
+.top-bar{
+    background:$top-bar__bg;
+    height:$top-bar__height;
+    width:100%;
+    position:absolute;
+    padding:0 24px;
+    display: flex;
+    align-items: center;
+    top:0;
+    left:0;
 
+}
 .ptable-wrapper {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     overflow: auto;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - #{$top-bar__height});
 
     //small cube to fill top right corner
     .filler {

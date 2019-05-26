@@ -26,6 +26,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        // border-bottom:$size * 2.5 solid #7bff00;
+
+        &::before{
+            content:'';
+            height:20px;
+            width:20px;
+            background:#7bff00;
+            position:absolute;
+            top:-10px;
+            left:-10px;
+            transform:rotate(45deg)
+        }
 
         .range {
             font-size: $size * $table-element__size-special-range;

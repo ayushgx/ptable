@@ -46,6 +46,7 @@ $(document).ready(function () {
     //only use jquery .css() property 
 
     $(data).each(function (index, obj) {
+
         var temp = obj.table_grid_index;
         var id_val = '#element_' + temp;
         var element = $(id_val);
@@ -64,8 +65,9 @@ $(document).ready(function () {
 
 
 
-    // removing unnecessary element html with opacity 0
+    // removing unnecessary element html with opacity 0 and adding ripple to only required elements
     $('.ptable-element-wrapper').each(function (index, obj) {
+        $(this).children('.ptable-element').ripple();
         if ($(obj).css("opacity") == '0') {
             $(this).empty();
         }
@@ -82,4 +84,5 @@ $(document).ready(function () {
     var special_container_html = '<div class="ptable-element special_container"><div class="range">121-126</div><div class="label">Ubu-Ubh</div></div>';
     $('#element_128').css("opacity", '1');
     $('#element_128').append(special_container_html);
+    $('#element_92,#element_110,#element_128').ripple();
 })
