@@ -24,8 +24,9 @@ $(document).ready(function () {
         periods.style.top = (ptableOffsetTop - period_group_size - top_bar_height) + "px";
     })
     //in mobile we do not use scrollbooster therefore, we do not need special click function
-    $('.ptable-element-wrapper').each(function (index, obj) {
-        $(this).find('.ptable-element').click(function () {
+    $('.ptable-element').each(function (index, obj) {
+        $(this).click(function () {
+            // if(!$(this).hasClass('disabled'))
             // alert($(this).find('.ptable-element__element-name').text());
         })
     })

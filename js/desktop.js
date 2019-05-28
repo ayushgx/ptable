@@ -45,8 +45,8 @@ $(document).ready(function () {
   //idea is to find initial and final position of mouse during mousedown and mouseup events;
   //if there is no significance difference b/w positions then simply register the click.
   const drag_click_threshold = 5;
-  $('.ptable-element-wrapper').each(function (index, obj) {
-    let ptable_element = $(this).find('.ptable-element');
+  $('.ptable-element').each(function (index, obj) {
+    let ptable_element = $(obj);
     let x1, y1, x2, y2;
     ptable_element.mousedown(function (e) {
       x1 = e.pageX;
@@ -57,8 +57,8 @@ $(document).ready(function () {
       x2 = e.pageX;
       y2 = e.pageY;
       // console.log('diff', 'x', Math.abs(x1 - x2), 'y', Math.abs(y1 - y2))
-      if (Math.abs(x1 - x2) <= drag_click_threshold && Math.abs(y1 - y2) <= drag_click_threshold) {
-        // alert($(this).find('.ptable-element__element-name').text());
+      if (Math.abs(x1 - x2) <= drag_click_threshold && Math.abs(y1 - y2) <= drag_click_threshold && !ptable_element.hasClass('disabled')) {
+        alert($(this).find('.ptable-element__element-name').text());
       }
     })
   })

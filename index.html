@@ -2,10 +2,20 @@
 <html lang="en">
 
 <head>
+
+  <title>Interactive Periodic Table | Best Periodic Table Online</title>
+
   <meta charset="UTF-8">
-  <title>PTable - Interactive Periodic Table</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101014">
+  <meta name="title" content="Interactive Periodic Table | Best Periodic Table Online">
+  <meta name="description" content="Interactive Periodic Table provides details about all the elements packed with awesome design">
+  <meta name="keywords" content="periodic table, periodic, table, interactive periodic table, elements, periods, groups">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Ayush Gupta">
+
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/simplebar.min.css">
@@ -13,11 +23,10 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="js/ripple.min.js"></script>
-  <!-- for loading different js files based on different device (touch/non-touch screen) -->
   <script src="js/ptable_data_injector.js"></script>
+  <!-- loads either mobile.js or desktop.js depending upon the device -->
   <script src="js/main.js"></script>
   <script src="js/simplebar.min.js"></script>
-
   <script src='https://unpkg.com/scrollbooster@1.0.4/dist/scrollbooster.min.js'></script>
 
 </head>
@@ -25,27 +34,28 @@
 <body>
   <!-- contains sections search nav, left nav, footer, main ptable  -->
   <div class="main-wrapper">
+
     <div class="top-bar">
       <div class="title">
         <div class="logo-box"></div>
         Interactive PeriodicTable
       </div>
       <div class="credits">
-          Made by <a href="https://www.instagram.com/ayushgx/">@ayushgx</a>
+        Made by <a href="https://www.instagram.com/ayushgx/">@ayushgx</a>
       </div>
     </div>
+
     <!-- ptable starts here -->
     <div class="ptable-wrapper">
-      <div class="filler"></div>
+
       <!-- groups(horizontal) and periods(vertical) -->
+      <div class="filler"></div>
       <div class="ptable-periods-wrapper">
-        <!-- periods going here -->
         <div class="ptable-periods">
           <!-- injected by js: <div class="period">i</div> -->
         </div>
       </div>
       <div class="ptable-groups-wrapper">
-        <!-- groups going here -->
         <div class="ptable-groups">
           <!-- injected by js: <div class="group">i</div> -->
         </div>
@@ -65,18 +75,10 @@
         <!-- inner scroll wrapper ends -->
       </div>
       <!-- ptable wrapper ends -->
-
-
-
-
-
-
-
     </div>
     <!-- ptable main wrapper ends -->
 
     <!-- sdditional code from search, left-nav...etc -->
-
   </div>
 
   <!-- 

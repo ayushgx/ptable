@@ -125,12 +125,18 @@ body {
                 align-items: center;
                 justify-content: center;
                 color: #fff;
+                transition:.2s;
 
                 &:nth-child(odd) {
                     background: $period-group__content--odd-bg;
                 }
                 &:nth-child(even) {
                     background: $period-group__content--even-bg;
+                }
+
+                &.active{
+                    border-bottom:2px solid rgb(0, 255, 34);
+                    background: #005f24 !important;
                 }
             }
         }
@@ -160,12 +166,18 @@ body {
                 align-items: center;
                 justify-content: center;
                 flex: 1;
+                transition:.2s;
 
                 &:nth-child(odd) {
                     background: $period-group__content--odd-bg;
                 }
                 &:nth-child(even) {
                     background: $period-group__content--even-bg;
+                }
+
+                &.active{
+                    border-bottom:2px solid rgb(0, 255, 34);
+                    background: #005f24 !important;
                 }
             }
         }
