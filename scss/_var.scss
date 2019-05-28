@@ -12,15 +12,20 @@ $inner-scroll-wrapper:$table-background;
 //// periods/groups bar
 $period-group__thickness:20px; 
 $priod-grup__base-bg:rgb(23, 23, 24);
+$priod-grup__base-bg:rgb(23, 23, 24);
 $period-group__content--odd-bg:rgb(47, 47, 66);
 $period-group__content--even-bg:rgb(23, 23, 24);
 $period-group__period-shadow:2px 0 4px rgba(0, 0, 0, 0.2);
 $period-group__group-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+$period-group-active__bg:#005f24;
+$period-group-active__border:2px solid rgb(0, 255, 34);
+$period-period-active__border:2px solid rgb(0, 255, 34);
+
 
 ///////////////////////
 //// ptable grid main
 $table-grid-background:transparent;
-$table-text-color: rgb(255, 255, 255);
+$table-text-color: rgb(231, 236, 238);
 
 // base element size
 $table-element_height: 60px;
@@ -49,7 +54,7 @@ $size: ($base/60)*$table-element_height; //(do not change)
 
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
-$table-element__bg-color:rgb(42, 42, 58);
+$table-element__bg-color:rgb(46, 44, 58);
 $table-element__radioactive_bg-color: rgb(211, 212, 226);
 $table-element__text-color: rgb(224, 224, 224);
 

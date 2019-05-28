@@ -22,11 +22,9 @@ $(document).ready(function () {
     for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '">' + i + '</div>');
     for (var i = 1; i <= 8; i++) $('.ptable-periods').append('<div class="period period-' + i + '">' + i + '</div>');
 
-
     //injecting ptable
     var ptable_grid = "";
     var id = 0;
-    var table = $('.ptable')
     for (var i = 1; i <= 11; i++) {
         ptable_grid += '<div class="ptable-row">';
         for (var j = 1; j <= 18; j++) {
@@ -36,6 +34,7 @@ $(document).ready(function () {
             var m_row = (i <= 8) ? 'mr-' + i : '';
 
             //element wrapper (contains all the important tagging classes)
+            //classes m_row and m_col should always be at the first an the second place
             ptable_grid += '<div class="ptable-element-wrapper ' + m_row + ' ' + m_col + '  row-' + i + ' col-' + j + '" id="element_' + id + '">';
             //each element
             ptable_grid += '<div class="ptable-element"><div class="ptable-element__top-wrapper"><div class="ptable-element__atomic-num"></div><div class="ptable-element__radioactive"></div></div><div class="ptable-element__element-symbol"></div><div class="ptable-element__element-name"></div></div>';

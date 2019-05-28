@@ -58,7 +58,7 @@ $(document).ready(function () {
       y2 = e.pageY;
       // console.log('diff', 'x', Math.abs(x1 - x2), 'y', Math.abs(y1 - y2))
       if (Math.abs(x1 - x2) <= drag_click_threshold && Math.abs(y1 - y2) <= drag_click_threshold && !ptable_element.hasClass('disabled')) {
-        alert($(this).find('.ptable-element__element-name').text());
+        // alert($(this).find('.ptable-element__element-name').text());
       }
     })
   })

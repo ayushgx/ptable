@@ -57,7 +57,7 @@ body {
             width:32px;
             height:32px;
             border-radius: 99px;
-            background: url('/img/logo.png'), #fff;
+            background: url('../img/logo.png'), #fff;
             background-position: center;
             background-repeat: no-repeat;
             background-size: 28px;
@@ -135,8 +135,8 @@ body {
                 }
 
                 &.active{
-                    border-bottom:2px solid rgb(0, 255, 34);
-                    background: #005f24 !important;
+                    border-left:$period-period-active__border;
+                    background: $period-group-active__bg !important;
                 }
             }
         }
@@ -176,8 +176,8 @@ body {
                 }
 
                 &.active{
-                    border-bottom:2px solid rgb(0, 255, 34);
-                    background: #005f24 !important;
+                    border-top:$period-group-active__border;
+                    background: $period-group-active__bg !important;
                 }
             }
         }
