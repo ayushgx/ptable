@@ -1,0 +1,7 @@
+demo code to customise ripple effect
+.container .legitRipple-ripple {
+    background: yellow;
+    /* You can change the transition properties too!
+       Just don't try and change the width transition's easing. */
+    transition-duration: .15s, .9s; /*width, opacity*/
+}

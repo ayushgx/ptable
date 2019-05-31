@@ -1,0 +1,161 @@
+.ptable-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    width: 100vw;
+    height: calc(100vh - #{$top-bar__height});
+
+    //small cube to fill top right corner
+    .filler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $period-group__thickness;
+        width: $period-group__thickness;
+        background: $priod-grup__base-bg;
+        z-index: 100;
+    }
+
+    .ptable-groups-wrapper,
+    .ptable-periods-wrapper {
+        position: absolute;
+        background: $priod-grup__base-bg;
+        overflow: hidden;
+
+    }
+
+    .ptable-periods-wrapper {
+        bottom: 0;
+        left: 0;
+        height: calc(100% - #{$period-group__thickness});
+        width: $period-group__thickness;
+        box-shadow: $period-group__period-shadow;
+        z-index: 100;
+
+        .ptable-periods {
+            position: absolute;
+            top: ($table_wrapper_height - $table_height)/2 - $period-group__thickness;
+            left: 0;
+            width: 100%;
+            height: $table-actual-height;
+            display: flex;
+            flex-direction: column;
+
+            .period {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                transition:.2s;
+
+                &:nth-child(odd) {
+                    background: $period-group__content--odd-bg;
+                }
+                &:nth-child(even) {
+                    background: $period-group__content--even-bg;
+                }
+
+                &.active{
+                    border-left:$period-group-active__border;
+                    background: $period-group-active__bg !important;
+                }
+            }
+        }
+    }
+
+    .ptable-groups-wrapper {
+        top: 0;
+        right: 0;
+        width: calc(100% - #{$period-group__thickness});
+        right: 0;
+        height: $period-group__thickness;
+        box-shadow: $period-group__group-shadow;
+        z-index: 100;
+
+        .ptable-groups {
+            position: absolute;
+            top: 0;
+            left: ($table-wrapper-width - $table-width)/2 - $period-group__thickness;
+            height: 100%;
+            width: $table-width;
+            display: flex;
+            color: #fff;
+
+            .group {
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                transition:.2s;
+
+                &:nth-child(odd) {
+                    background: $period-group__content--odd-bg;
+                }
+                &:nth-child(even) {
+                    background: $period-group__content--even-bg;
+                }
+
+                &.active{
+                    border-top:$period-group-active__border;
+                    background: $period-group-active__bg !important;
+                }
+            }
+        }
+    }
+
+    &__ptable {
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+
+        .inner-scroll-wrapper {
+            background: $table-background;
+            width: $table-wrapper-width;
+            height: $table-wrapper-height;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+
+            &:active {
+                cursor: grabbing;
+            }
+
+
+            .ptable {
+                background: $table-grid-background;
+                color: $table-element__text-color;
+                display: flex;
+                flex-direction: column;
+                /* transform: scale(1.5) */
+
+                &-row {
+                    height: $table-element_height;
+                    display: flex;
+
+                    &:not(:last-child) {
+                        margin-bottom: $table-element-spacing;
+                    }
+                }
+
+                &-element-wrapper {
+                    position: relative;
+                    height: $table-element_height;
+                    width: $table-element_width;
+                    opacity: 0;
+
+                    &:not(:last-child) {
+                        margin-right: $table-element-spacing;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
