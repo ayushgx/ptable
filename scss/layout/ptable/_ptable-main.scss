@@ -112,7 +112,6 @@
         height: 100%;
         position: relative;
 
-
         .inner-scroll-wrapper {
             background: $table-background;
             width: $table-wrapper-width;
@@ -125,7 +124,6 @@
             &:active {
                 cursor: grabbing;
             }
-
 
             .ptable {
                 background: $table-grid-background;
@@ -154,8 +152,6 @@
                     }
                 }
             }
-
-
         }
     }
 }
