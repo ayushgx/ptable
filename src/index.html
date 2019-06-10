@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Interactive Periodic Table | Best Periodic Table Online</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101014">
+  <meta name="title" content="Interactive Periodic Table | Best Periodic Table Online">
+  <meta name="description"
+    content="Interactive Periodic Table provides details about all the elements packed with awesome design">
+  <meta name="keywords"
+    content="periodic table, periodic, table, interactive periodic table, elements, periods, groups">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Ayush Gupta">
+
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+  <!-- build:css css/style.min.css -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/vendors/simplebar.min.css">
+  <link rel="stylesheet" href="css/vendors/ripple.min.css">
+  <!-- endbuild -->
+
+  <!-- build:js js/main.min.js -->
+  <script src="js/vendors/jquery-3.4.1.min.js"></script>
+  <script src='js/vendors/scrollbooster.min.js'></script>
+  <script src="js/vendors/ripple.min.js"></script>
+  <script src="js/vendors/simplebar.min.js"></script>
+
+  <script src="js/ptable_data_injector.js"></script>
+  <script src="js/ptable_main.js"></script>
+  <script src="js/mobile.js"></script>
+  <script src="js/desktop.js"></script>
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!-- contains sections search nav, left nav, footer, main ptable  -->
+  <div class="main-wrapper">
+
+    <div class="top-bar">
+      <div class="title">
+        <div class="logo-box"></div>
+        Interactive PeriodicTable
+      </div>
+      <div class="credits">
+        Made by <a href="https://www.instagram.com/ayushgx/">@ayushgx</a>
+      </div>
+    </div>
+
+    <!-- ptable starts here -->
+    <div class="ptable-wrapper">
+
+      <!-- groups(horizontal) and periods(vertical) -->
+      <div class="filler"></div>
+      <div class="ptable-periods-wrapper">
+        <div class="ptable-periods">
+          <!-- injected by js: <div class="period">i</div> -->
+        </div>
+      </div>
+      <div class="ptable-groups-wrapper">
+        <div class="ptable-groups">
+          <!-- injected by js: <div class="group">i</div> -->
+        </div>
+      </div>
+
+      <!-- uses data-simplebar -->
+      <!-- wrapper of ptable_holder + actual_ptable(grid) -->
+      <div class="ptable-wrapper__ptable" data-simplebar>
+        <!-- ptable holder -->
+        <div class="inner-scroll-wrapper">
+          <!-- periodic table starts herer -->
+          <div class="ptable">
+            <!-- data injected by js -->
+          </div>
+          <!-- ptable main ends -->
+        </div>
+        <!-- inner scroll wrapper ends -->
+      </div>
+      <!-- ptable wrapper ends -->
+    </div>
+    <!-- ptable main wrapper ends -->
+
+    <!-- sdditional code from search, left-nav...etc -->
+  </div>
+
+  <!-- 
+  <div class="ptable-element">
+    <div class="ptable-element__top-wrapper">
+      <div class="ptable-element__atomic-num">51</div>
+      <div class="ptable-element__radioactive show"></div>
+    </div>
+    <div class="ptable-element__element-symbol">Sb</div>
+    <div class="ptable-element__element-name">Antimony</div>
+  </div>
+   -->
+</body>
+
+</html>

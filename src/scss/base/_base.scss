@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+@import 'fonts';
+@import 'helpers';
+@import 'typography';
+// @import '../variables/variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  background: $table-background;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
