@@ -43,7 +43,7 @@ body {
       width: 32px;
       height: 32px;
       border-radius: 99px;
-      background: url("../img/logo.png"), #f00606;
+      background: url("../img/logo.png"), white;
       background-position: center;
       background-repeat: no-repeat;
       background-size: 28px;
@@ -138,8 +138,7 @@ body {
   .ptable-wrapper__ptable {
     overflow: auto;
     width: 100%;
-    height: 100%;
-    position: relative; }
+    height: 100%; }
     .ptable-wrapper__ptable .inner-scroll-wrapper {
       background: #555261;
       width: 1300px;

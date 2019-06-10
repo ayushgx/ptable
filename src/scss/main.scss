@@ -2,14 +2,12 @@
 // This file contains all SCSS imports
 // -----------------------------------------------------------------------------
 
-@import 'abstracts/abstracts';
-
 @import 'variables/variables';
+
+@import 'abstracts/abstracts';
 
 @import 'base/base';
 
 @import 'layout/layout';
 
 @import 'components/components';
-
-
