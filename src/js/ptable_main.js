@@ -1,14 +1,3 @@
-// function is_touch_device() {
-// 	return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
-// }
-// if (!is_touch_device()) {
-// 	document.write('<script type="text/javascript" src="js/desktop.js"><\/script>');
-// 	console.log("you are not using a touch device...");
-// } else {
-// 	document.write('<script type="text/javascript" src = "js/mobile.js" > < \/script>');
-// 	console.log("you are using a touch device...");
-// }
-
 $(document).ready(function () {
 
 	$('.top-bar,.period,.group').ripple();
@@ -46,7 +35,6 @@ $(document).ready(function () {
 		}
 	}
 
-
 	//enables only the given class name as argument
 	function period_group_highlighter(val) {
 		var element = $(val).find('.ptable-element,:not(.special-container)');
@@ -63,13 +51,15 @@ $(document).ready(function () {
 		$(this).addClass('active');
 		period_group_highlighter(class_name);
 
-	}).click(function () {
-		count++;
-	}).mouseleave(function () {
-		if (count % 2 == 0) {
+  })
+  // .click(function () {
+	// 	count++;
+  // })
+  .mouseleave(function () {
+		// if (count % 2 == 0) {
 			$(this).removeClass('active');
 			all_elements_task('enable');
-		}
+		// }
 	})
 
 	$('.top-bar').click(function () {

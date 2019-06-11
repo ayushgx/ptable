@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var useref = require('gulp-useref');
-var terser = require('gulp-terser');//because es6 is not supported in gulp-uglify and gulp-uglify-es is no longer maintained
+var terser = require('gulp-terser');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var del = require('del');

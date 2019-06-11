@@ -99,9 +99,9 @@ body {
         color: #fff;
         transition: .2s; }
         .ptable-wrapper .ptable-periods-wrapper .ptable-periods .period:nth-child(odd) {
-          background: #2f2f42; }
+          background: #474769; }
         .ptable-wrapper .ptable-periods-wrapper .ptable-periods .period:nth-child(even) {
-          background: #2c2c2c; }
+          background: #353558; }
         .ptable-wrapper .ptable-periods-wrapper .ptable-periods .period.active {
           border-left: 2px solid #00ff22;
           background: #005f24 !important; }
@@ -129,9 +129,9 @@ body {
         flex: 1;
         transition: .2s; }
         .ptable-wrapper .ptable-groups-wrapper .ptable-groups .group:nth-child(odd) {
-          background: #2f2f42; }
+          background: #474769; }
         .ptable-wrapper .ptable-groups-wrapper .ptable-groups .group:nth-child(even) {
-          background: #2c2c2c; }
+          background: #353558; }
         .ptable-wrapper .ptable-groups-wrapper .ptable-groups .group.active {
           border-top: 2px solid #00ff22;
           background: #005f24 !important; }

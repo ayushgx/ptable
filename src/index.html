@@ -9,10 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101014">
   <meta name="title" content="Interactive Periodic Table | Best Periodic Table Online">
-  <meta name="description"
-    content="Interactive Periodic Table provides details about all the elements packed with awesome design">
-  <meta name="keywords"
-    content="periodic table, periodic, table, interactive periodic table, elements, periods, groups">
+  <meta name="description" content="Interactive Periodic Table provides details about all the elements packed with awesome design">
+  <meta name="keywords" content="periodic table, periodic, table, interactive periodic table, elements, periods, groups">
   <meta name="robots" content="index, follow">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
@@ -22,21 +20,29 @@
 
   <!-- build:css css/style.min.css -->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/vendors/simplebar.min.css">
+  <link rel="stylesheet" href="css/vendors/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="css/vendors/ripple.min.css">
   <!-- endbuild -->
 
   <!-- build:js js/main.min.js -->
-  <script src="js/vendors/jquery-3.4.1.min.js"></script>
-  <script src='js/vendors/scrollbooster.min.js'></script>
-  <script src="js/vendors/ripple.min.js"></script>
-  <script src="js/vendors/simplebar.min.js"></script>
+  <script type="text/javascript" src="js/vendors/jquery-3.4.1.min.js"></script>
 
-  <script src="js/ptable_data_injector.js"></script>
-  <script src="js/ptable_main.js"></script>
+  <!-- creates divs -->
+  <script type="text/javascript" src="js/ptable_data_injector.js"></script>
+
+  <!-- contains main functions enable/disable created divs, adding ripples, and adding hover effect to group and periods -->
+  <script type="text/javascript" src="js/ptable_main.js"></script>
   <script src="js/mobile.js"></script>
   <script src="js/desktop.js"></script>
+
+  <script src="js/vendors/OverlayScrollbars.min.js"></script>
+
+  <script type="text/javascript" src="js/vendors/ripple.min.js"></script>
+
+  <script type="text/javascript" src='js/vendors/scrollbooster.min.js'></script>
+
   <!-- endbuild -->
+  
 
 </head>
 
@@ -72,7 +78,7 @@
 
       <!-- uses data-simplebar -->
       <!-- wrapper of ptable_holder + actual_ptable(grid) -->
-      <div class="ptable-wrapper__ptable" data-simplebar>
+      <div class="ptable-wrapper__ptable">
         <!-- ptable holder -->
         <div class="inner-scroll-wrapper">
           <!-- periodic table starts herer -->
