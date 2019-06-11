@@ -1,6 +1,6 @@
 ////////////////////
 //// top-bar
-$top-bar__height: 60px;
+$top-bar__height: 6rem;
 $top-bar__bg:#19191f;
 
 ////////////////////
@@ -11,14 +11,14 @@ $inner-scroll-wrapper:green;
 
 /////////////////////////
 //// periods/groups bar
-$period-group__thickness:20px; 
+$period-group__thickness:2rem; 
 $priod-grup__base-bg:#19191f;
-$period-group__content--odd-bg:rgb(71, 71, 105);
-$period-group__content--even-bg:rgb(53, 53, 88);
-$period-group__period-shadow:2px 0 4px rgba(0, 0, 0, 0.2);
-$period-group__group-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+$period-group__content--odd-bg:rgb(72, 72, 104);
+$period-group__content--even-bg:rgb(42, 42, 66);
+$period-group__period-shadow:.2rem 0 .4rem rgba(0, 0, 0, 0.2);
+$period-group__group-shadow:0 .2rem .4rem rgba(0, 0, 0, 0.2);
 $period-group-active__bg:#005f24;
-$period-group-active__border:2px solid rgb(0, 255, 34);
+$period-group-active__border: .2rem solid rgb(0, 255, 34);
 
 
 ///////////////////////
@@ -27,20 +27,22 @@ $table-grid-background: transparent;
 $table-text-color: rgb(255, 255, 255);
 
 // base element size
-$table-element_height: 60px;
+$table-element_height: 6rem;
 $table-element_width: $table-element_height;
 
-$table-element-spacing:4px;
+$table-element-spacing:.4rem;
 
-$table-wrapper-width:1300px;
-$table-wrapper-height:900px;
+$table-wrapper-width:130rem;
+$table-wrapper-height:90rem;
 
 $table-width:($table-element_width*18)+($table-element-spacing*17);
 $table-height:($table-element_height*11)+($table-element-spacing*10); //8 periods
 $table-actual-height:($table-element_height*8)+($table-element-spacing*7); //full grid
 
+
+
 ///////////////////////////
-//// single element
+//// single element (nothing to 'rem' over here we only need to rem $table-element_height)
 
 $base: 10; //(do not change)
 //calculates all lengths based on the parent element's height
@@ -49,11 +51,11 @@ $size: ($base/60)*$table-element_height; //(do not change)
 // $table-element_height->  $base
 // 60                   ->  10
 // 1                    ->  10/60
-// 200                  ->  (10/60)*200
+// 200 (example)        ->  (10/60)*200
 
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
-$table-element__bg-color:rgb(42, 42, 58);
+$table-element__bg-color:rgb(47, 47, 65);
 $table-element__radioactive_bg-color: rgb(211, 212, 226);
 $table-element__text-color: rgb(224, 224, 224);
 
@@ -63,6 +65,6 @@ $table-element__size-symbol: 1.8;
 $table-element__size-name: 1.1;
 
 $table-element__size-special-range:1.2;
-$table-element__size-special-label:1.24;
+$table-element__size-special-label:1.2;
 $table-element__size-special-bg:rgba(5, 2, 29, 0.233);
 //can add other variables as well... check in th scss file

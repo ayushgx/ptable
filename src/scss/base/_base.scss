@@ -1,11 +1,11 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
 
 @import 'fonts';
 @import 'helpers';
 @import 'typography';
-// @import '../variables/variables';
 
 *,
 *::before,
@@ -16,12 +16,12 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 62.5%;
 }
 
 body {
   box-sizing: inherit;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
   background: $table-background;
   color: #fff;
   height: 100vh;
@@ -33,3 +33,5 @@ body {
   width: 100%;
   height: 100%;
 }
+
+//MEDIA QUERY MANAGER

@@ -3,7 +3,7 @@
     height:$top-bar__height;
     width:100%;
     position:absolute;
-    padding:0 20px;
+    padding:0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,28 +11,28 @@
     left:0;
 
     .title{
-        font-size:18px;
+        font-size:1.8rem;
         display: flex;
         align-items: center;
 
         .logo-box{
-            width:32px;
-            height:32px;
-            border-radius: 99px;
+            width:3.2rem;
+            height:3.2rem;
+            border-radius: 9.9rem;
             background: url('../img/logo.png'), rgb(255, 255, 255);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 28px;
-            margin-right:10px;
+            background-size: 2.8rem;
+            margin-right:1.0rem;
         }
     }
     .credits{
-        font-size:14px;
+        font-size:1.4rem;
         color:rgb(172, 173, 175);
     }
     a{
         text-decoration: none;
-        margin-left:2px;
+        margin-left: .2rem;
         color: inherit;
     }
 

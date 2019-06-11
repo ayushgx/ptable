@@ -5,6 +5,10 @@
 // stored in $element_height
 //on the basis of $element_height, $size is calculated using ($base/60)*$element_height
 
+//EVERYTHING WILL BE CALCULATED ON THE BASIS OF $size = 10px VARIABLE
+//WHICH DEPENDS UPON ELEMENT HEIGHT
+//WHICH IVE ALREADY CONVERTED TO rem...
+
 .ptable-element {
     height: $size * 6;
     width: $size * 6;
@@ -17,21 +21,21 @@
     color: $table-element__text-color;
     border-radius: $size * .2;
     padding: $size*.5 $size*.3;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.205);
+    box-shadow: 0 $size * .2 $size * .5 rgba(0, 0, 0, 0.205);
     transition: background .2s, color .2s, border-color .2s, box-shadow .2s;
 
     &.disabled {
         background: rgba(27, 26, 31, 0.219);
         color: rgb(163, 163, 173);
         border-color: rgb(125, 123, 136) !important;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.109);
+        box-shadow: 0 $size *.1 $size *.2 rgba(0, 0, 0, 0.109);
 
     }
 
     &.special-container {
         background: $table-element__size-special-bg;
         padding: $size*.6 $size*.5;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 $size *.2 $size *.4 rgba(0, 0, 0, 0.7);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,13 +45,14 @@
 
         &::before {
             content: '';
-            height: 20px;
-            width: 20px;
+            height: $size *2;
+            width: $size *2;
             background: #7bff00;
             position: absolute;
-            top: -10px;
-            left: -10px;
+            top: $size *-1;
+            left: $size *-1;
             transform: rotate(45deg);
+            box-shadow: 0  $size *.2  $size *.4 rgba(0, 0, 0, 0.3);
             transition: background .2s;
 
         }
@@ -64,7 +69,7 @@
         &.disabled {
             background: rgba(27, 26, 31, 0.219);
             color: rgb(163, 163, 173);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.109);
+            box-shadow: 0 $size *.1 $size *.2 rgba(0, 0, 0, 0.109);
 
 
         }
