@@ -1,13 +1,6 @@
 totally unordered list
 base upon the thoughts
 
-!!!!! By including the search-nav data injector, somehow that highlight functionlity has stopped working properly
-maybe the fix could be the combination of both injector files...
-
-
-!!! combine all the data injectors
-        => ptable-data-injector.just
-        => search-results-data-injector.js
 
 !!! GENERALISE THAT MATERIAL MENU
 

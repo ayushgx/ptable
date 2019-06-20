@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var search_text_field = $('.snv-search-form__search-field');
-    var result_items = $(".search-results__list .search-item");
+    var result_items = $(".snv-search-results__list .search-item");
 
     //=====================================================
     // JSON FOR MENU-VALUE AND DATABASE-COLUMN-VALUE
@@ -51,7 +51,7 @@ $(document).ready(function () {
     //handles the clear input (cross) button
     $('.snv-search-form__clear-btn').click(function () {
         $('.search-item').css('display', 'flex');
-        $('.search-results__no-result').removeClass('show');
+        $('.snv-search-results__no-result').removeClass('show');
     })
 
     /*
@@ -73,9 +73,9 @@ $(document).ready(function () {
             });
             //handles the displaying of the error screen
             if (result_items.children(':visible').length == 0) {
-                $('.search-results__no-result').addClass('show');
+                $('.snv-search-results__no-result').addClass('show');
             } else {
-                $('.search-results__no-result').removeClass('show');
+                $('.snv-search-results__no-result').removeClass('show');
             }
         })
     }
@@ -99,11 +99,11 @@ $(document).ready(function () {
                 dataType: 'json',
                 beforeSend: function () {
                     console.log("show");
-                    $('.search-results__skeleton-loader').fadeIn(100);
+                    $('.snv-search-results__skeleton-loader').fadeIn(100);
                 },
                 complete: function () {
                     console.log("hide");
-                    $('.search-results__skeleton-loader').fadeOut(100);
+                    $('.snv-search-results__skeleton-loader').fadeOut(100);
                 },
                 success: function (response) {
                     manage_col_data_response(response, db_col_name);

@@ -1134,8 +1134,24 @@ var data = [
         "theme_color": "L"
     }
 ];
+ 
+var cat_name_to_theme_id = {
 
-var theme_category_variables = {
+    'alkali_metals': 'A',
+    'alkaline_earth_metals': 'B',
+    'transition_metals': 'C',
+    'post_transition_metals': 'D',
+    'metalloids': 'E',
+    'other_non_metals': 'G',
+    'halogens': 'H',
+    'noble_gasses': 'I',
+    'lanthanides': 'J',
+    'actinides': 'K',
+    'superactinides': 'L',
+    'all_items': 'O'
+}
+
+var theme_id_to_cat_name = {
     'A': 'alkali_metals',
     'B': 'alkaline_earth_metals',
     'C': 'transition_metals',
@@ -1149,25 +1165,96 @@ var theme_category_variables = {
     'L': 'superactinides',
     'O': 'all_items'
 }
-$(document).ready(function(){
-    
+
+$(document).ready(function () {
+
+    // injecting periods/groups numbers
+    for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '">' + i + '</div>');
+    for (var i = 1; i <= 8; i++) $('.ptable-periods').append('<div class="period period-' + i + '">' + i + '</div>');
+
+    //injecting ptable
+    var ptable_grid = "";
+    var id = 0;
+    for (var i = 1; i <= 11; i++) {
+        ptable_grid += '<div class="ptable-row">';
+        for (var j = 1; j <= 18; j++) {
+
+            // added these classes to target only the group elements without lanthanides,actinides,superactinides
+            var m_col = (i <= 8) ? 'mc-' + j : '';
+            var m_row = (i <= 8) ? 'mr-' + i : '';
+
+            //element wrapper (contains all the important tagging classes)
+            //classes m_row and m_col should always be at the first an the second place
+            ptable_grid += '<div class="ptable-element-wrapper ' + m_row + ' ' + m_col + '  row-' + i + ' col-' + j + '" id="element_' + id + '">';
+            //each element
+            ptable_grid += '<div class="ptable-element"><div class="ptable-element__top-wrapper"><div class="ptable-element__atomic-num"></div><div class="ptable-element__radioactive"></div></div><div class="ptable-element__element-symbol"></div><div class="ptable-element__element-name"></div></div>';
+            ptable_grid += '</div>';
+
+            id++;
+        }
+        ptable_grid += '</div>';
+    }
+    $('.ptable').append(ptable_grid);
+
+    //never use js style property... (wasted my whole night to debug...)
+    //only use jquery .css() property 
+
+    $(data).each(function (index, obj) {
+
+        var temp = obj.table_grid_index;
+        var id_val = '#element_' + temp;
+        var element = $(id_val);
+
+        element.css("opacity", "1");
+
+        element.find('.ptable-element').addClass(obj.theme_color);
+
+        if (obj.radioactive == '+')
+            element.find('.ptable-element__radioactive').addClass('show');
+
+        element.find('.ptable-element__atomic-num').text(obj.id);
+        element.find('.ptable-element__element-symbol').text(obj.symbol);
+        element.find('.ptable-element__element-name').text(obj.name);
+    })
+
+    // removing unnecessary element html with opacity 0 and adding ripple to only required elements
+    $('.ptable-element-wrapper').each(function (index, obj) {
+        $(this).children('.ptable-element').ripple();
+        if ($(obj).css("opacity") == '0') {
+            $(this).empty();
+        }
+    })
+
+    //injecting special content boxes for lanthanoids,actinoids,superactinoid
+    var special_container_html = '<div class="ptable-element special-container"><div class="range">57-71</div><div class="label">La-Lu</div></div>';
+    $('#element_92').append(special_container_html);
+    var special_container_html = '<div class="ptable-element special-container"><div class="range">89-103</div><div class="label">Ac-Lr</div></div>';
+    $('#element_110').append(special_container_html);
+    var special_container_html = '<div class="ptable-element special-container"><div class="range">121-126</div><div class="label">Ubu-Ubh</div></div>';
+    $('#element_128').append(special_container_html);
+
+    $('#element_92, #element_110, #element_128').css("opacity", '1').ripple();
+
+    //ptable ends===============================================================
+    //load search-nav===========================================================
+
     var results_html = '';
     $(data).each(function (index, obj) {
         results_html += '<li class="search-item">';
-        results_html += '<div class="search-item__element-symbol bg_' + theme_category_variables[obj['theme_color']] + '">' + obj['symbol'] + '</div>';
+        results_html += '<div class="search-item__element-symbol bg_' + theme_id_to_cat_name[obj['theme_color']] + '">' + obj['symbol'] + '</div>';
         results_html += '<div class="search-item__element-info">';
         results_html += '<div class="element-name">' + obj['name'] + '</div>';
         results_html += '<div class="element-mass">' + obj['atomic_mass'] + ' (g/mol)</div>';
         results_html += '</div><svg class="search-item__open-in-new"><use xlink:href="img/sprites.svg#icon-open_in_new"></use></svg></li>';
     })
-    $('.search-results__list').html(results_html);
+    $('.snv-search-results__list').html(results_html);
 
     // injecting the search nav search result skeleton data
     var search_res_skeleton_data = "";
     var search_res_skeleton_count=10;
     while(search_res_skeleton_count--){
-        search_res_skeleton_data+='<li class="search-results__skeleton-loader__item"><div class="sr-sl-1"></div><div class="sr-sl-g"><div class="sr-sl-2"></div><div class="sr-sl-3"></div></div></li>'
+        search_res_skeleton_data+='<li class="snv-search-results__skeleton-loader__item"><div class="sr-sl-1"></div><div class="sr-sl-g"><div class="sr-sl-2"></div><div class="sr-sl-3"></div></div></li>'
     }
-    $('.search-results__skeleton-loader__items').html(search_res_skeleton_data)
+    $('.snv-search-results__skeleton-loader__items').html(search_res_skeleton_data)
 
 })

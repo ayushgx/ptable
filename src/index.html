@@ -300,32 +300,32 @@
 								</span>
 							</form>
 						</div>
-						<!-- search-results -->
-						<div class="search-results">
+						<!-- snv-search-results -->
+						<div class="snv-search-results">
 							<div class="search-nav__block-header">
 								<svg class="search-nav__block-header--header-icon">
 									<use xlink:href="img/sprites.svg#icon-search-results"></use>
 								</svg>
 								Search results
 							</div>
-							<div class="search-results__content">
+							<div class="snv-search-results__content">
 								<!-- show class dalni hai!!! -->
-								<div class="search-results__no-result ">
-									<svg class="search-results__no-result__icon">
+								<div class="snv-search-results__no-result ">
+									<svg class="snv-search-results__no-result__icon">
 										<use xlink:href="img/sprites.svg#icon-not-found"></use>
 									</svg>
 									No element found!
 								</div>
 
 								<!-- skeleton loader -->
-								<div class="search-results__skeleton-loader">
-									<ul class="search-results__skeleton-loader__items">
+								<div class="snv-search-results__skeleton-loader">
+									<ul class="snv-search-results__skeleton-loader__items">
 										<!-- data injected by js -->
 									</ul>
 								</div>
 
 
-								<ul class='search-results__list'>
+								<ul class='snv-search-results__list'>
 									<!-- data injected by js -->
 								</ul>
 							</div>
@@ -361,7 +361,7 @@
 	<script src="js/global_functions.js"></script>
 
 	<!-- creates divs -->
-	<script type="text/javascript" src="js/ptable/ptable-data-injector.js"></script>
+	<script type="text/javascript" src="js/data-injector.js"></script>
 
 	<!-- contains main functions enable/disable created divs, adding ripples, and adding hover effect to group and periods -->
 	<script type="text/javascript" src="js/ptable/ptable_main.js"></script>
@@ -376,11 +376,6 @@
 
 	<!-- contains basic functionality to open/close with blur, complete handling of the material menu -->
 	<script src="js/search-nav/search-nav-main.js"></script>
-
-	<!-- first inject the data then apply all the controllers -->
-	<!-- this shit is causing errors in the categories hilight function -->
-
-	<script src="js/search-nav/search-results-data-injector.js"></script>
 
 	<!-- functionality to search elements (after data-loader/manager/injector js) -->
 	<script src="js/search-nav/search-controller.js"></script>

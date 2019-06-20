@@ -20,7 +20,7 @@ $(document).ready(function () {
 				var key = arguments[i];
 				ptable_element.each(function (index, obj) {
 					//in here keyword arguments will have null value for this 'each' function... thats why we used key variable.
-					if ($(obj).hasClass(theme_category_variables[key]) && $(obj).hasClass('disabled'))
+					if ($(obj).hasClass(cat_name_to_theme_id[key]) && $(obj).hasClass('disabled'))
 						$(obj).toggleClass('disabled')
 				})
 			}
