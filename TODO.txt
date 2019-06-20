@@ -1,0 +1,25 @@
+totally unordered list
+base upon the thoughts
+
+!!!!! By including the search-nav data injector, somehow that highlight functionlity has stopped working properly
+maybe the fix could be the combination of both injector files...
+
+
+!!! combine all the data injectors
+        => ptable-data-injector.just
+        => search-results-data-injector.js
+
+!!! GENERALISE THAT MATERIAL MENU
+
+lanthanides,actinides,auperactinides, tags (thinking of a possible way...)
+
+=> IMPROVEMENT: add a little bit of delay when the user hovers the period/group
+
+1) bookmarks fature (then show a snackbar of confirmation)
+3) show related topics (in cards style) by tagging created articles with element id or names
+4) controls with fixed position just like rounded social share buttons
+5) tooltips just like wikipedia... probably with image
+
+
+
+6) a lot of optimisation is required....

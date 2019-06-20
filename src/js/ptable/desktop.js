@@ -41,9 +41,7 @@ if (!is_touch_device()) {
       },
     });
 
-    //==================================
-    //  adding overlay-scroll libray
-    //==================================
+    //adding overlay scrollbars
     $('.ptable-wrapper__ptable').overlayScrollbars({
       className: "os-theme-dark"
     });

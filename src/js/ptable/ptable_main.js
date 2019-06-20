@@ -5,7 +5,6 @@ function is_touch_device() {
 }
 $(document).ready(function () {
 
-	$('.top-bar,.period,.group').ripple();
 
 	// => disables all the elements except specified as in the arguement <=
 	//   * example disable_elements_except('element_category_1', 'element_category_2',... )

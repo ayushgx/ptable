@@ -44,24 +44,7 @@
 	<link rel="stylesheet" href="css/vendors/ripple.min.css">
 	<!-- endbuild -->
 
-	<!-- build:js js/main.min.js -->
-	<script type="text/javascript" src="js/vendors/jquery-3.4.1.min.js"></script>
 
-	<!-- creates divs -->
-	<script type="text/javascript" src="js/ptable/ptable_data_injector.js"></script>
-
-	<!-- contains main functions enable/disable created divs, adding ripples, and adding hover effect to group and periods -->
-	<script type="text/javascript" src="js/ptable/ptable_main.js"></script>
-	<script src="js/ptable/mobile.js"></script>
-	<script src="js/ptable/desktop.js"></script>
-
-	<script src="js/vendors/OverlayScrollbars.min.js"></script>
-
-	<script type="text/javascript" src="js/vendors/ripple.min.js"></script>
-
-	<script type="text/javascript" src='js/vendors/scrollbooster.min.js'></script>
-
-	<!-- endbuild -->
 
 
 </head>
@@ -70,50 +53,291 @@
 	<!-- contains sections search nav, left nav, footer, main ptable  -->
 	<div class="main-wrapper">
 
-		<div class="top-bar">
-			<div class="title">
-				<div class="logo-box"></div>
-				Interactive PeriodicTable
-			</div>
-			<div class="credits">
-				Made by <a href="https://www.instagram.com/ayushgx/">@ayushgx</a>
-			</div>
-		</div>
 
-		<!-- ptable starts here -->
-		<div class="ptable-wrapper">
 
-			<!-- groups(horizontal) and periods(vertical) -->
-			<div class="filler"></div>
-			<div class="ptable-periods-wrapper">
-				<div class="ptable-periods">
-					<!-- injected by js: <div class="period">i</div> -->
+
+		<!-- ptable main starts -->
+		<div class="ptable-and-top-bar-wrapper">
+			<div class="top-bar">
+				<div class="title">
+					<!-- added class aa because it triggers the search nav in the default code -->
+					<div class="logo-box aa"></div>
+					Interactive PeriodicTable
 				</div>
-			</div>
-			<div class="ptable-groups-wrapper">
-				<div class="ptable-groups">
-					<!-- injected by js: <div class="group">i</div> -->
+				<div class="credits">
+					Made by <a href="https://www.instagram.com/ayushgx/">@ayushgx</a>
 				</div>
 			</div>
 
-			<!-- uses data-simplebar -->
-			<!-- wrapper of ptable_holder + actual_ptable(grid) -->
-			<div class="ptable-wrapper__ptable">
-				<!-- ptable holder -->
-				<div class="inner-scroll-wrapper">
-					<!-- periodic table starts herer -->
-					<div class="ptable">
-						<!-- data injected by js -->
+			<!-- ptable starts here -->
+			<div class="ptable-wrapper">
+
+				<!-- groups(horizontal) and periods(vertical) -->
+				<div class="filler"></div>
+				<div class="ptable-periods-wrapper">
+					<div class="ptable-periods">
+						<!-- injected by js: <div class="period">i</div> -->
 					</div>
-					<!-- ptable main ends -->
 				</div>
-				<!-- inner scroll wrapper ends -->
-			</div>
-			<!-- ptable wrapper ends -->
-		</div>
-		<!-- ptable main wrapper ends -->
+				<div class="ptable-groups-wrapper">
+					<div class="ptable-groups">
+						<!-- injected by js: <div class="group">i</div> -->
+					</div>
+				</div>
 
-		<!-- sdditional code from search, left-nav...etc -->
+				<!-- uses data-simplebar -->
+				<!-- wrapper of ptable_holder + actual_ptable(grid) -->
+				<div class="ptable-wrapper__ptable">
+					<!-- ptable holder -->
+					<div class="inner-scroll-wrapper">
+						<!-- periodic table starts herer -->
+						<div class="ptable">
+							<!-- data injected by js -->
+						</div>
+						<!-- ptable main ends -->
+					</div>
+					<!-- inner scroll wrapper ends -->
+				</div>
+				<!-- ptable wrapper ends -->
+			</div>
+			<!-- ptable main wrapper ends -->
+
+			<!-- sdditional code from search, left-nav...etc -->
+		</div>
+
+		<!-- ================ SEARCH NAV STARTS!!! ====================================================================================================================== -->
+		<!-- ============================================================================================================================================================ -->
+		<div class="search-nav ">
+			<div class="search-nav__close">
+				<svg class="search-ico">
+					<use xlink:href="img/sprites.svg#icon-close"></use>
+				</svg>
+			</div>
+			<div class="snv-cols-wrapper">
+				<div class="snv-cols">
+					<div class="snv-col-1">
+						<div class="element-categories">
+							<div class="search-nav__block-header">
+								<svg class="search-nav__block-header--header-icon">
+									<use xlink:href="img/sprites.svg#icon-clear_all"></use>
+								</svg>
+								Categories
+							</div>
+							<div class="element-categories__content">
+								<div class="element-categories__col-left">
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_alkaline_earth_metals"></div>
+										<span class="element-categories__item-name">Alkaline Earth Metals</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_alkali_metals"></div>
+										<span class="element-categories__item-name">Alkali Metals</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_transition_metals"></div>
+										<span class="element-categories__item-name">Transition Metals</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_post_transition_metals"></div>
+										<span class="element-categories__item-name">Post-transition Metals</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_metalloids"></div>
+										<span class="element-categories__item-name">Metalloids</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_superactinides"></div>
+										<span class="element-categories__item-name">Superactinides</span>
+									</div>
+								</div>
+								<div class="element-categories__col-right">
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_other_non_metals"></div>
+										<span class="element-categories__item-name">Other Non-metals</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_halogens"></div>
+										<span class="element-categories__item-name">Halogens</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_noble_gasses"></div>
+										<span class="element-categories__item-name">Noble Gasses</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_lanthanides"></div>
+										<span class="element-categories__item-name">Lanthanides</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_actinides"></div>
+										<span class="element-categories__item-name">Actinides</span>
+									</div>
+									<div class="element-categories__item">
+										<div class="element-categories__item-color bg_all_items"></div>
+										<span class="element-categories__item-name">All items</span>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="options">
+							<div class="search-nav__block-header">Other Options</div>
+
+						</div>
+					</div>
+					<div class="snv-col-2">
+
+						<div class="element-search-wrapper">
+							<div class="parameter-menu material-menu ">
+								<ul>
+									<!-- all the classes like i1,i2,i3,i4... should be at the last position in the class list -->
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i1">
+											<use xlink:href="img/sprites.svg#icon-filter_list"></use>
+										</svg>
+										<span class="material-menu__option-text">All parameters</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i2">
+											<use xlink:href="img/sprites.svg#icon-sort-alphabetically"></use>
+										</svg>
+										<span class="material-menu__option-text">Name</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i3">
+											<use xlink:href="img/sprites.svg#icon-font_download"></use>
+										</svg>
+										<span class="material-menu__option-text">Element symbol</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i4">
+											<use xlink:href="img/sprites.svg#icon-looks_3"></use>
+										</svg>
+										<span class="material-menu__option-text">Element number</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i5">
+											<use xlink:href="img/sprites.svg#icon-date_range"></use>
+										</svg>
+										<span class="material-menu__option-text">Year</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i6">
+											<use xlink:href="img/sprites.svg#icon-weight"></use>
+										</svg>
+										<span class="material-menu__option-text">Weight</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i7">
+											<use xlink:href="img/sprites.svg#icon-bubble_chart"></use>
+										</svg>
+										<span class="material-menu__option-text">Density</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i8">
+											<use xlink:href="img/sprites.svg#icon-wb_iridescent"></use>
+										</svg>
+										<span class="material-menu__option-text">Conductivity</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i9">
+											<use xlink:href="img/sprites.svg#icon-hash"></use>
+										</svg>
+										<span class="material-menu__option-text">CAS Number</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i10">
+											<use xlink:href="img/sprites.svg#icon-flash_on"></use>
+										</svg>
+										<span class="material-menu__option-text">Electronegativity</span>
+									</li>
+									<li class="parameter-menu__list-item">
+										<svg class="material-menu__option-icon i11">
+											<use xlink:href="img/sprites.svg#icon-radio_button_unchecked"></use>
+										</svg>
+										<span class="material-menu__option-text">Atomic Radius</span>
+									</li>
+								</ul>
+							</div>
+							<div class="search-nav__block-header">
+								<svg class="search-nav__block-header--header-icon">
+									<use xlink:href="img/sprites.svg#icon-search"></use>
+								</svg>
+								Search Element
+							</div>
+
+							<div class="search-parameter-wrapper">
+								<div class="search-parameter">
+									<svg class="search-parameter__choice-icon i1">
+										<use xlink:href="img/sprites.svg#icon-filter_list"></use>
+									</svg>
+									<span class="search-parameter__choice-value">All parameters</span>
+									<svg class="search-parameter__icon-down">
+										<use xlink:href="img/sprites.svg#icon-keyboard_arrow_down"></use>
+									</svg>
+								</div>
+							</div>
+							<!-- 
+                        ////    search form      ///////
+                        -->
+							<form action="#" class="snv-search-form">
+								<input type="text" class="snv-search-form__search-field"
+									placeholder="Search for an element" name="" id="">
+								<span class="snv-search-form__search-btn-group">
+									<button type="reset" class="snv-search-form__clear-btn">
+										<svg class="snv-search-form__icon-close">
+											<use xlink:href="img/sprites.svg#icon-close"></use>
+										</svg>
+									</button>
+
+									<!-- planning a real time search without search button -->
+
+									<!-- <button type="submit" class="snv-search-form__search-btn">
+                                    <svg class="snv-search-form__icon-search">
+                                        <use xlink:href="img/sprites.svg#icon-search"></use>
+                                    </svg>
+                                </button> -->
+								</span>
+							</form>
+						</div>
+						<!-- search-results -->
+						<div class="search-results">
+							<div class="search-nav__block-header">
+								<svg class="search-nav__block-header--header-icon">
+									<use xlink:href="img/sprites.svg#icon-search-results"></use>
+								</svg>
+								Search results
+							</div>
+							<div class="search-results__content">
+								<!-- show class dalni hai!!! -->
+								<div class="search-results__no-result ">
+									<svg class="search-results__no-result__icon">
+										<use xlink:href="img/sprites.svg#icon-not-found"></use>
+									</svg>
+									No element found!
+								</div>
+
+								<!-- skeleton loader -->
+								<div class="search-results__skeleton-loader">
+									<ul class="search-results__skeleton-loader__items">
+										<!-- data injected by js -->
+									</ul>
+								</div>
+
+
+								<ul class='search-results__list'>
+									<!-- data injected by js -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- search-nav ends -->
+
 	</div>
 
 	<!-- 
@@ -126,6 +350,46 @@
     <div class="ptable-element__element-name">Antimony</div>
   </div>
    -->
+
+	<!-- ================ JS INCOMING!!! ============================================================================================================================ -->
+	<!-- ============================================================================================================================================================ -->
+
+	<!-- build:js js/main.min.js -->
+	<script type="text/javascript" src="js/vendors/jquery-3.4.1.min.js"></script>
+
+	<!-- important functions -->
+	<script src="js/global_functions.js"></script>
+
+	<!-- creates divs -->
+	<script type="text/javascript" src="js/ptable/ptable-data-injector.js"></script>
+
+	<!-- contains main functions enable/disable created divs, adding ripples, and adding hover effect to group and periods -->
+	<script type="text/javascript" src="js/ptable/ptable_main.js"></script>
+	<script src="js/ptable/mobile.js"></script>
+	<script src="js/ptable/desktop.js"></script>
+
+	<script src="js/vendors/OverlayScrollbars.min.js"></script>
+
+	<script type="text/javascript" src="js/vendors/ripple.min.js"></script>
+
+	<script type="text/javascript" src='js/vendors/scrollbooster.min.js'></script>
+
+	<!-- contains basic functionality to open/close with blur, complete handling of the material menu -->
+	<script src="js/search-nav/search-nav-main.js"></script>
+
+	<!-- first inject the data then apply all the controllers -->
+	<!-- this shit is causing errors in the categories hilight function -->
+
+	<script src="js/search-nav/search-results-data-injector.js"></script>
+
+	<!-- functionality to search elements (after data-loader/manager/injector js) -->
+	<script src="js/search-nav/search-controller.js"></script>
+
+	<!-- at last load all the scrollbars -->
+	<script src="js/scrollbars-manager.js"></script>
+	<!-- and then load all the ripples -->
+	<script src="js/ripple-manager.js"></script>
+	<!-- endbuild -->
 </body>
 
 </html>
