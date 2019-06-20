@@ -5,7 +5,7 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
 //function to open and close search-nav
     function open_search_nav(){
         attach_overlay('.search-nav', search_nav_trans_dur)
-        $('.ptable-and-top-bar-wrapper').css('filter', 'blur(6px)')
+        $('.ptable-and-top-bar-wrapper').css('filter', 'blur(5px)')
         // $('.ptable-and-top-bar-wrapper').css('overflow', 'hidden')
         $('.search-nav').addClass('active');
     }

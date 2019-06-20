@@ -47,7 +47,7 @@
         }
 
         &:nth-child(odd) {
-            background: rgb(47, 47, 56);
+            background: $search-categories-alternate-bg;
         }
 
         &-color {

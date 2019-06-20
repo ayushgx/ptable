@@ -154,7 +154,7 @@
                     position: relative;
                     height: $table-element_height;
                     width: $table-element_width;
-                    opacity: 0;
+                    opacity: 0; //to hide unnecessary elements but keep them in dom for making space
 
                     &:not(:last-child) {
                         margin-right: $table-element-spacing;

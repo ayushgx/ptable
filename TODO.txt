@@ -1,7 +1,6 @@
 totally unordered list
 base upon the thoughts
 
-
 !!! GENERALISE THAT MATERIAL MENU
 
 lanthanides,actinides,auperactinides, tags (thinking of a possible way...)
@@ -13,6 +12,6 @@ lanthanides,actinides,auperactinides, tags (thinking of a possible way...)
 4) controls with fixed position just like rounded social share buttons
 5) tooltips just like wikipedia... probably with image
 
-
-
-6) a lot of optimisation is required....
+OPTIMISATIONS:
+ => dynamically add that nuclear icon in the ptable element instead of pushing it in all the elements
+ 

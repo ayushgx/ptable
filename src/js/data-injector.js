@@ -1172,7 +1172,7 @@ $(document).ready(function () {
     for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '">' + i + '</div>');
     for (var i = 1; i <= 8; i++) $('.ptable-periods').append('<div class="period period-' + i + '">' + i + '</div>');
 
-    //injecting ptable
+    //injecting ptable (creating divs (elements) without text data)
     var ptable_grid = "";
     var id = 0;
     for (var i = 1; i <= 11; i++) {
@@ -1182,12 +1182,14 @@ $(document).ready(function () {
             // added these classes to target only the group elements without lanthanides,actinides,superactinides
             var m_col = (i <= 8) ? 'mc-' + j : '';
             var m_row = (i <= 8) ? 'mr-' + i : '';
+            
 
             //element wrapper (contains all the important tagging classes)
             //classes m_row and m_col should always be at the first an the second place
             ptable_grid += '<div class="ptable-element-wrapper ' + m_row + ' ' + m_col + '  row-' + i + ' col-' + j + '" id="element_' + id + '">';
             //each element
-            ptable_grid += '<div class="ptable-element"><div class="ptable-element__top-wrapper"><div class="ptable-element__atomic-num"></div><div class="ptable-element__radioactive"></div></div><div class="ptable-element__element-symbol"></div><div class="ptable-element__element-name"></div></div>';
+            ptable_grid += '<div class="ptable-element"><div class="ptable-element__top-wrapper"><div class="ptable-element__atomic-num"></div>'
+            ptable_grid += '<div class="ptable-element__radioactive"><svg class="ptable-element__radioactive__icon"><use xlink:href="img/sprites.svg#icon-nuclear-2"></use></svg></div></div><div class="ptable-element__element-symbol"></div><div class="ptable-element__element-name"></div></div>';
             ptable_grid += '</div>';
 
             id++;
@@ -1199,6 +1201,7 @@ $(document).ready(function () {
     //never use js style property... (wasted my whole night to debug...)
     //only use jquery .css() property 
 
+    //injecting the text data in the created divs
     $(data).each(function (index, obj) {
 
         var temp = obj.table_grid_index;
@@ -1251,7 +1254,7 @@ $(document).ready(function () {
 
     // injecting the search nav search result skeleton data
     var search_res_skeleton_data = "";
-    var search_res_skeleton_count=10;
+    var search_res_skeleton_count=16;
     while(search_res_skeleton_count--){
         search_res_skeleton_data+='<li class="snv-search-results__skeleton-loader__item"><div class="sr-sl-1"></div><div class="sr-sl-g"><div class="sr-sl-2"></div><div class="sr-sl-3"></div></div></li>'
     }

@@ -56,11 +56,11 @@ $size: ($base/60)*$table-element_height; //(do not change)
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
 $table-element__bg-color:rgb(47, 47, 65);
-$table-element__radioactive_bg-color: rgb(211, 212, 226);
+$table-element__radioactive_bg-color: rgb(208, 255, 0);
 $table-element__text-color: rgb(224, 224, 224);
 
 $table-element__size-atomic-num: 1.2;
-$table-element__size-radioactive-dot: .5;
+$table-element__size-radioactive-size: 1.4;
 $table-element__size-symbol: 1.8;
 $table-element__size-name: 1.1;
 

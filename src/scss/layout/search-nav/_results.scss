@@ -126,13 +126,13 @@
     &__skeleton-loader {
         //skeleton
 
-
         &__item {
             display: flex;
             position: relative;
             padding: $search-result-item-padding;
             align-items: center;
             width: 100%;
+            border-bottom: .1rem solid rgb(44, 40, 63);
 
             .sr-sl-1,
             .sr-sl-2,
@@ -143,11 +143,11 @@
 
             @keyframes linear-bg {
                 0% {
-                    background: darken($search-result-bg-skeleton, 5%);
+                    background: darken($search-result-bg-skeleton, 2%);
                 }
 
                 100% {
-                    background: lighten($search-result-bg-skeleton, 5%);
+                    background: lighten($search-result-bg-skeleton, 6%);
                 }
             }
 
@@ -233,8 +233,6 @@
             &:before {
                 width: .3rem;
             }
-
-            // box-shadow: 0 2px 6px rgba(22, 22, 27, 0.568);
 
             .search-item__open-in-new {
                 display: block;

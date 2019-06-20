@@ -1,3 +1,21 @@
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "files.exclude": {
+    ".vscode": true,
+    "node_modules": true,
+    "README.md": true,
+    "package-lock.json": true,
+    ".browserslistrc": true,
+    ".gitignore": true,
+    "src\\js\\vendors": true,
+    "src\\img\\page-not-found.svg": true,
+    "src\\img\\logo.png": true,
+    "src\\img\\logo2.png": true,
+    "src\\img\\ptable-icons.zip": true,
+    "src\\img\\favicon": true,
+    "src\\fonts": true,
+    "src\\css": true,
+    "src\\scss\\base\\_typography.scss": true,
+    "src\\scss\\components": true
+  }
 }
