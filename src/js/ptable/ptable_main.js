@@ -5,7 +5,6 @@ function is_touch_device() {
 }
 $(document).ready(function () {
 
-	$('.top-bar,.period,.group').ripple();
 
 	// => disables all the elements except specified as in the arguement <=
 	//   * example disable_elements_except('element_category_1', 'element_category_2',... )
@@ -21,7 +20,7 @@ $(document).ready(function () {
 				var key = arguments[i];
 				ptable_element.each(function (index, obj) {
 					//in here keyword arguments will have null value for this 'each' function... thats why we used key variable.
-					if ($(obj).hasClass(theme_category_variables[key]) && $(obj).hasClass('disabled'))
+					if ($(obj).hasClass(cat_name_to_theme_id[key]) && $(obj).hasClass('disabled'))
 						$(obj).toggleClass('disabled')
 				})
 			}

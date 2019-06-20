@@ -136,10 +136,8 @@
         }
 
         .ptable-element__radioactive {
-            height: $size * $table-element__size-radioactive-dot;
-            width: $size * $table-element__size-radioactive-dot;
-            border-radius: $size * 9.9;
-            background: $table-element__radioactive_bg-color;
+            height: $size * $table-element__size-radioactive-size;
+            width: $size * $table-element__size-radioactive-size;
             position: absolute;
             top: $size * .4;
             right: $size * .4;
@@ -147,6 +145,15 @@
 
             &.show {
                 display: block !important;
+            }
+
+            &__icon{
+                fill:$table-element__radioactive_bg-color;
+                position:absolute;
+                top:0;
+                right:0;
+                height:100%;
+                width:100%;
             }
         }
     }

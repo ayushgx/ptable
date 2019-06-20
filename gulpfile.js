@@ -47,6 +47,11 @@ gulp.task('fonts', function(){
         .pipe(gulp.dest('dist/fonts'))
 })
 
+gulp.task('includes', function(){
+    return gulp.src('src/includes/**/*')
+        .pipe(gulp.dest('dist/includes'))
+})
+
 gulp.task('watch', function () {
     gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
 })
@@ -55,7 +60,7 @@ gulp.task('build', function(callback){
     runSequence(
         'clean:dist',
         'sass',
-        ['useref', 'images', 'fonts'],
+        ['useref', 'images', 'fonts', 'includes'],
         callback
     )
 })

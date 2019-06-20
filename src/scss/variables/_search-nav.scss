@@ -1,0 +1,55 @@
+
+////////////////////////////////////////////////////////////
+/////////////   VARIABLES MAIN   ///////////////////////////
+
+//search nav
+$search-nav-width:59rem;
+$search-nav-width-sm:30rem;
+
+$search-nav__close-size:4.2rem;
+$search-nav__close-shadow:$shadow-elevation-8, $shadow-elevation-4;
+$search-nav__close-bg:rgb(76, 76, 100);
+$search-nav__close-bh-hover:rgb(54, 54, 187);
+
+//panel general
+$panel-gap: 1.4rem;
+$panel-box-shadow: $shadow-elevation-6, $shadow-elevation-3;
+
+$panel-header-height:3.6rem;
+$panel-header-icon-size:1.8rem;
+$panel-header-icon-color:#e4e4e4;
+$panel-header-border-thickness:.2rem;
+// $panel-header-bg:rgb(62, 61, 75);
+// $panel-header-border-bg:rgb(38, 36, 54);
+
+$panel-header-bg:rgb(72, 72, 93);
+$panel-header-border-bg:rgb(38, 36, 54);
+
+$panel-content-background:#272736;
+$panel-content-hover-background:rgb(32, 32, 46) !important;
+
+// $panel-content-background:#28282e;
+// $panel-content-hover-background:rgb(34, 34, 42) !important;
+
+//panel specific
+//categories
+$search-categories-border:.1rem solid #323246;
+$search-categories-font-size:1.3rem;
+$search-categories-font-color:#dbdbdb;
+$search-categories-elements-padding:0 1rem 0 2rem;
+$search-categories-color-circle-size:1.4rem;
+$search-categories-color-circle-margin-right:.8rem;
+$search-categories-alternate-bg:rgb(43, 43, 61);
+
+//other options
+// *nothing here*
+
+
+//search results
+$search-result-item-padding:.6rem 1.8rem;
+$search-res-element-symbol-size: 3.7rem;
+$search-res-element-hover-bg: $panel-content-hover-background;
+$search-result-main-text:1.7rem;
+$search-result-sub-text:1.2rem;
+$search-result-bg-skeleton:rgb(59, 59, 78);
+$search-result-error-icon-bg-opacity:0.5;

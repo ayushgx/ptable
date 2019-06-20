@@ -1,0 +1,273 @@
+//search results
+.snv-search-results {
+    flex: 1;
+    overflow: hidden;
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - #{$panel-header-height});
+    }
+
+    &__no-result,
+    &__skeleton-loader {
+        //skeleton!!!
+        position: absolute;
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $panel-content-background;
+        overflow: hidden;
+        display: none;
+
+        &.show {
+            display: flex; //only for no-result
+        }
+    }
+
+    &__skeleton-loader.show {
+        display: none; //just reset/ or to prevent any misbehaviour even if user adds the 'show' class
+    }
+
+    &__no-result {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(124, 132, 151);
+
+        &__icon {
+            // margin-top: -10%;
+            fill: rgb(107, 104, 121);
+            height: 7rem;
+            margin-bottom: 1.2rem;
+            animation: animColor 8s linear infinite;
+        }
+
+        @keyframes fill_transition {
+            0% {
+                fill: rgb(160, 76, 76);
+            }
+
+            20% {
+                fill: rgb(172, 172, 86);
+            }
+
+            40% {
+                fill: rgb(80, 148, 158);
+            }
+
+            60% {
+                fill: rgb(160, 81, 160);
+            }
+
+            80% {
+                fill: rgb(82, 163, 82);
+            }
+
+            100% {
+                fill: rgb(160, 76, 76);
+
+            }
+        }
+
+        @keyframes animColor {
+            0% {
+                fill: rgba(163, 240, 80, $search-result-error-icon-bg-opacity);
+            }
+
+            10% {
+                fill: rgba(83, 240, 80, $search-result-error-icon-bg-opacity);
+            }
+
+            20% {
+                fill: rgba(80, 240, 157, $search-result-error-icon-bg-opacity);
+            }
+
+            30% {
+                fill: rgba(80, 240, 237, $search-result-error-icon-bg-opacity);
+            }
+
+            40% {
+                fill: rgba(80, 163, 240, $search-result-error-icon-bg-opacity);
+            }
+
+            50% {
+                fill: rgba(110, 112, 219, $search-result-error-icon-bg-opacity);
+            }
+
+            60% {
+                fill: rgba(157, 80, 240, $search-result-error-icon-bg-opacity);
+            }
+
+            70% {
+                fill: rgba(237, 80, 240, $search-result-error-icon-bg-opacity);
+            }
+
+            80% {
+                fill: rgba(240, 80, 163, $search-result-error-icon-bg-opacity);
+            }
+
+            90% {
+                fill: rgba(240, 80, 83, $search-result-error-icon-bg-opacity);
+            }
+
+            95% {
+                fill: rgba(240, 157, 80, $search-result-error-icon-bg-opacity);
+            }
+
+            100% {
+                fill: rgba(163, 240, 80, $search-result-error-icon-bg-opacity);
+            }
+        }
+    }
+
+    &__skeleton-loader {
+        //skeleton
+
+        &__item {
+            display: flex;
+            position: relative;
+            padding: $search-result-item-padding;
+            align-items: center;
+            width: 100%;
+            border-bottom: .1rem solid rgb(44, 40, 63);
+
+            .sr-sl-1,
+            .sr-sl-2,
+            .sr-sl-3 {
+                animation: 1s linear-bg infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes linear-bg {
+                0% {
+                    background: darken($search-result-bg-skeleton, 2%);
+                }
+
+                100% {
+                    background: lighten($search-result-bg-skeleton, 6%);
+                }
+            }
+
+            .sr-sl-1 {
+                margin-right: 1.4rem;
+                width: $search-res-element-symbol-size;
+                height: $search-res-element-symbol-size;
+                border-radius: 99.9rem;
+                background: $search-result-bg-skeleton;
+            }
+
+            .sr-sl-g {
+                align-self: stretch;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: .5rem 0;
+
+                .sr-sl-2,
+                .sr-sl-3 {
+                    background: $search-result-bg-skeleton;
+                    border-radius: 999rem;
+                }
+
+                .sr-sl-2 {
+                    width: 70%;
+                    margin-bottom: .6rem;
+                    height: 58%;
+                }
+
+                .sr-sl-3 {
+                    width: 30%;
+                    height: 42%;
+                }
+            }
+        }
+
+    }
+
+    &__list,
+    &__skeleton-loader__items {
+        //skeleton
+        list-style-type: none;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    &__skeleton-loader__items {
+        overflow: hidden !important
+    }
+
+    .search-item {
+        display: flex;
+        position: relative;
+        padding: $search-result-item-padding;
+        align-items: center;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0rem;
+            background: rgb(5, 194, 5);
+            transition: .22s;
+        }
+
+        &:not(:last-child) {
+            border-bottom: .14rem solid rgba(51, 55, 77, 0.657);
+        }
+
+        &:hover {
+            background: $search-res-element-hover-bg;
+
+            &:before {
+                width: .3rem;
+            }
+
+            .search-item__open-in-new {
+                display: block;
+            }
+        }
+
+        &__element-symbol {
+            margin-right: 1.4rem;
+            width: $search-res-element-symbol-size;
+            height: $search-res-element-symbol-size;
+            border-radius: 99.9rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: .2rem 0 .5rem rgba(17, 15, 24, 0.356);
+        }
+
+        &__element-info {
+            .element-name {
+                font-size: $search-result-main-text;
+            }
+
+            .element-mass {
+                font-size: $search-result-sub-text;
+            }
+        }
+
+        &__open-in-new {
+            display: none;
+            margin-left: auto;
+            margin-right: 1rem;
+            fill: rgb(120, 120, 138);
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    }
+}

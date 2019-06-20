@@ -1,3 +1,11 @@
+.ptable-and-top-bar-wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:.33s ease;
+}
 .ptable-wrapper {
     position: absolute;
     bottom: 0;
@@ -146,7 +154,7 @@
                     position: relative;
                     height: $table-element_height;
                     width: $table-element_width;
-                    opacity: 0;
+                    opacity: 0; //to hide unnecessary elements but keep them in dom for making space
 
                     &:not(:last-child) {
                         margin-right: $table-element-spacing;

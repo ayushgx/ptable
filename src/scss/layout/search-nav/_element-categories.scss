@@ -1,0 +1,66 @@
+//element categories
+.element-categories {
+    margin-bottom: $panel-gap;
+    min-height: 20%;
+
+    &__content {
+        display: flex;
+        font-size: $search-categories-font-size;
+        color: $search-categories-font-color;
+    }
+
+    // &__col-left {}
+
+    // &__col-right {}
+
+    &__col-left,
+    &__col-right {
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    &__col-left>* {
+        padding: $search-categories-elements-padding;
+
+        &:not(:last-child) {
+            border-bottom: $search-categories-border;
+        }
+
+        border-right: $search-categories-border;
+    }
+
+    &__col-right>* {
+        padding: $search-categories-elements-padding;
+
+        &:not(:last-child) {
+            border-bottom: $search-categories-border;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+
+        &:hover {
+            background: $panel-content-hover-background;
+        }
+
+        &:nth-child(odd) {
+            background: $search-categories-alternate-bg;
+        }
+
+        &-color {
+            flex: 0 0 $search-categories-color-circle-size;
+            width:$search-categories-color-circle-size;
+            height: $search-categories-color-circle-size;
+            border-radius: 99.9rem;
+            margin-right: $search-categories-color-circle-margin-right;
+        }
+
+        // &-name {
+        //     //category name
+        // }
+    }
+
+}
