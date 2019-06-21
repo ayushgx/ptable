@@ -185,13 +185,16 @@ a {
   .top-bar__title-general-nav-group {
     display: flex; }
   .top-bar__icon {
-    height: 3.6rem;
-    width: 3.6rem;
+    height: 3.8rem;
+    width: 3.8rem;
     border-radius: 9.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: .2s background; }
+    .top-bar__icon:hover {
+      background: rgba(255, 255, 255, 0.26); }
     .top-bar__icon > svg {
       fill: #fff;
       height: 72%;

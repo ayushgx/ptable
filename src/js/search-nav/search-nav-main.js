@@ -18,10 +18,10 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
 
 
     //that green box at the top left
-    $('.ptable-and-top-bar-wrapper').dblclick(function () {
+    $('#button-search').click(function (e) {
+        e.stopPropagation();
         open_search_nav();
     })
-
     $('.search-nav__close').click(function () {
         close_search_nav();
     })
@@ -90,6 +90,25 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
         e.stopPropagation();
     });
 
+    //===========================================================================
+    //handles the hilight feature in the search nav
+    $('.element-categories__item').click(function(){
+        // console.log($(this).find('.element-categories__item-name').text().replace(/\-/g, '_').replace(/\ /g,'_').toLowerCase())
+        var parameter = $(this).find('.element-categories__item-name').text().replace(/\-/g, '_').replace(/\ /g,'_').toLowerCase();
+        var category_color = $(this).find('.element-categories__item-color').css('background-color')
+        console.log(category_color)
+        if(parameter=='all_items'){
+            all_elements_task('enable')
+            $('.group__info-2').css('border-bottom', 'none')
+        }
+        else{
+            disable_elements_except(parameter) //function found in the functions.js
+            $('.group__info-2').css('border-bottom', '2px solid '+category_color)
+        } 
+    })
+
+
+
     //============================================================================
     // removes nav when clicked outside body
     $('body').on('click', function (event) {
@@ -107,5 +126,7 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
     // $('.search-nav').click(function(e){
     //     e.stopPropagation();
     // })
+
+
 
 })

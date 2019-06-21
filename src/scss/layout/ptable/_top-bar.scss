@@ -15,14 +15,18 @@
     }
 
     &__icon{
-        // background:green;
-        height:3.6rem;
-        width:3.6rem;
+        height:3.8rem;
+        width:3.8rem;
         border-radius: 9.9rem;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition:.2s background;
+
+        &:hover{
+            background: rgba(255, 255, 255, 0.26);
+        }
 
         &>svg{
             fill:#fff;
