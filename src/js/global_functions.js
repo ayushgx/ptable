@@ -8,6 +8,7 @@
     * passed element must have z-index specified to fully prevent any abnormal behaviours
     * but works fine without specifing z-index till now... 
 */
+
 function attach_overlay(element, duration, background = 'rgba(0, 0, 0, 0.600)') {
     element_z_index = $(element).css("z-index");
     $(element).wrap("<div id='overlay'></div>");

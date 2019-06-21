@@ -29,7 +29,6 @@
         color: rgb(163, 163, 173);
         border-color: rgb(125, 123, 136) !important;
         box-shadow: 0 $size *.1 $size *.2 rgba(0, 0, 0, 0.109);
-
     }
 
     &.special-container {
@@ -54,7 +53,6 @@
             transform: rotate(45deg);
             box-shadow: 0  $size *.2  $size *.4 rgba(0, 0, 0, 0.3);
             transition: background .2s;
-
         }
 
         .range {

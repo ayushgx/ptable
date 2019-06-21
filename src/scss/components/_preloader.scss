@@ -1,0 +1,131 @@
+$color-light-blue: #9db1d6;
+$color-medium-blue: #1c2533;
+$color-dark-blue: #1a1a24;
+$ellipse-length: 230;
+$loader-icon-size:10rem;
+
+.periodic-table-loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, $color-dark-blue, $color-medium-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+
+    &__loader-text {
+        color: rgb(204, 207, 221);
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 10vh;
+        text-transform: uppercase;
+    }
+
+    &__loader-footer {
+        position:absolute;
+        bottom:1rem;
+        color:rgb(84, 86, 104);
+    }
+
+    &__icon {
+        //vmin means 1/100 of the smallest side of the viewport
+        // width: 90vmin;
+        // height: 90vmin;   
+        width: $loader-icon-size;
+        height: $loader-icon-size;
+        overflow: visible;
+        animation: move-up-down 2s ease-in-out infinite;
+
+        @keyframes move-up-down {
+            50% {
+                transform: translatey(-1rem);
+            }
+        }
+
+        .shadow {
+            filter: url(#blur);
+            fill: $color-dark-blue;
+            // opacity: 0.4;
+            opacity: 0;
+        }
+
+        .core {
+            circle {
+                fill: url(#gradient);
+
+                &:first-child {
+                    filter: url(#blur);
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .ring {
+
+            ellipse {
+                stroke: $color-light-blue;
+                stroke-width: .2rem;
+                fill: none;
+                transform-origin: center;
+                stroke-dasharray: 109 6;
+                stroke-dashoffset: 26;
+
+                &:nth-child(1) {
+                    filter: url(#blur);
+                    opacity: 0.5;
+                }
+
+                &:nth-child(3) {
+                    stroke-dasharray: 0 $ellipse-length;
+                    animation-name: orbit;
+                    animation-duration: 3s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    stroke-width: .7rem;
+                    stroke-linecap: round;
+                }
+
+                &:nth-child(4) {
+                    stroke-dasharray: 0 $ellipse-length;
+                    animation-name: orbit;
+                    animation-duration: 3s;
+                    animation-delay: -1.5s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    stroke-width: .7rem;
+                    stroke-linecap: round;
+                }
+            }
+
+            &:nth-child(2) ellipse {
+                animation-duration: 6s;
+                animation-direction: reverse;
+            }
+
+            &:nth-child(3) ellipse:nth-child(3) {
+                animation-delay: -1s;
+            }
+        }
+    }
+
+    @keyframes orbit {
+        0% {
+            stroke-dashoffset: 0;
+        }
+
+        50% {
+            stroke-width: .3rem;
+        }
+
+        100% {
+            stroke-dashoffset: $ellipse-length;
+        }
+    }
+
+}

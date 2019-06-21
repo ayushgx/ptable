@@ -79,7 +79,7 @@
         right: 0;
         width: calc(100% - #{$period-group__thickness});
         right: 0;
-        height: $period-group__thickness;
+        height:2 * $period-group__thickness;
         box-shadow: $period-group__group-shadow;
         z-index: 100;
 
@@ -94,12 +94,28 @@
 
             .group {
                 display: flex;
+                flex-direction: column; 
                 height: 100%;
                 align-items: center;
                 justify-content: center;
                 flex: 1;
                 transition:.2s;
 
+                &>*{
+                    flex:1;
+                    width:100%;
+                    text-align: center;
+                    // height: $period-group__thickness;
+                }
+
+                // &__info-1{
+                    
+                // }                
+                
+                &__info-2{
+                    background: $period-group-group-info-2-bg;
+                    transition: background .2s;
+                }
 
                 &:nth-child(odd) {
                     background: $period-group__content--odd-bg;
@@ -107,10 +123,13 @@
                 &:nth-child(even) {
                     background: $period-group__content--even-bg;
                 }
-
                 &.active{
-                    border-top:$period-group-active__border;
+                    border-top: $period-group-active__border !important;
                     background: $period-group-active__bg !important;
+
+                    .group__info-2{
+                        background: $period-group-group-info-2-active-bg;
+                    }
                 }
             }
         }

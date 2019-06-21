@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    setTimeout(function () {
+        $('.periodic-table-loader').fadeOut(200);
+    },3500)
     //==================================
     //  adding overlay-scroll libray
     //==================================

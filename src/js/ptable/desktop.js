@@ -6,7 +6,7 @@ if (!is_touch_device()) {
     var groups = document.querySelector(".ptable-groups");
     var periods = document.querySelector(".ptable-periods");
 
-    var period_group_size = $('.ptable-groups-wrapper').height();
+    var period_group_size = $('.ptable-periods-wrapper').width();
     var top_bar_height = $('.top-bar').height();
 
     var ptable_grid = $('.ptable');

@@ -9,13 +9,35 @@
     justify-content: space-between;
     top:0;
     left:0;
+    
+    &__title-general-nav-group{
+        display: flex;
+    }
 
-    .title{
+    &__icon{
+        // background:green;
+        height:3.6rem;
+        width:3.6rem;
+        border-radius: 9.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &>svg{
+            fill:#fff;
+            height: 72%;
+            width:72%;
+        }
+    }
+
+    .site-title{
         font-size:1.8rem;
         display: flex;
         align-items: center;
+        margin-left:1.6rem;
 
-        .logo-box{
+        .site-logo-box{
             width:3.2rem;
             height:3.2rem;
             border-radius: 9.9rem;
@@ -23,12 +45,19 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: 2.8rem;
-            margin-right:1.0rem;
+            margin-right:1rem;
         }
     }
-    .credits{
+    
+    &__credits{
         font-size:1.4rem;
+        margin-left: auto;
+        margin-right:1.6rem;
         color:rgb(172, 173, 175);
+
+        @media (max-width:520px){
+            display: none;
+        }
     }
     a{
         text-decoration: none;

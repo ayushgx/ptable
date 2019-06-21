@@ -16,8 +16,6 @@
     "src\\fonts": true,
     "src\\css": true,
     "src\\scss\\base\\_typography.scss": true,
-    "src\\scss\\components": true,
-    "src\\includes": true,
-    "dist": true
+    "src\\includes": true
   }
 }

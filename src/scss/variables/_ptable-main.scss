@@ -1,6 +1,6 @@
 ////////////////////
 //// top-bar
-$top-bar__height: 6rem;
+$top-bar__height: 5.5rem;
 $top-bar__bg:#19191f;
 
 ////////////////////
@@ -19,7 +19,8 @@ $period-group__period-shadow:.2rem 0 .4rem rgba(0, 0, 0, 0.2);
 $period-group__group-shadow:0 .2rem .4rem rgba(0, 0, 0, 0.2);
 $period-group-active__bg:#005f24;
 $period-group-active__border: .2rem solid rgb(0, 255, 34);
-
+$period-group-group-info-2-bg: rgb(21, 23, 29);
+$period-group-group-info-2-active-bg: rgb(0, 153, 25);
 
 ///////////////////////
 //// ptable grid main
@@ -56,7 +57,8 @@ $size: ($base/60)*$table-element_height; //(do not change)
 //can be changed (required_value/10):
 //eg: 22px  ->  2.2
 $table-element__bg-color:rgb(47, 47, 65);
-$table-element__radioactive_bg-color: rgb(208, 255, 0);
+// $table-element__radioactive_bg-color: rgb(208, 255, 0);
+$table-element__radioactive_bg-color: yellow;
 $table-element__text-color: rgb(224, 224, 224);
 
 $table-element__size-atomic-num: 1.2;

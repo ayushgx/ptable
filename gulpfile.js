@@ -9,6 +9,7 @@ var autoprefix = require('gulp-autoprefixer');
 var runSequence = require('gulp4-run-sequence');
 var rcs = require('gulp-rcs');//scramble names
 var beautify = require('gulp-beautify');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('clean:dist', function(cb){
     return (del.sync('dist'), cb());
@@ -56,11 +57,21 @@ gulp.task('watch', function () {
     gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
 })
 
+gulp.task('minify-html', function(){
+    return gulp.src('dist/*.html')
+    .pipe(htmlmin({ 
+        collapseWhitespace: true,
+        removeComments: true
+     }))
+    .pipe(gulp.dest('dist'))
+})
+
 gulp.task('build', function(callback){
     runSequence(
         'clean:dist',
         'sass',
         ['useref', 'images', 'fonts', 'includes'],
+        'minify-html',
         callback
     )
 })

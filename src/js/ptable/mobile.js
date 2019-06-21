@@ -6,7 +6,7 @@ if (is_touch_device()) {
         var top_bar_height = $('.top-bar').height();
 
 
-        var period_group_size = $('.ptable-groups-wrapper').height();
+        var period_group_size = $('.ptable-periods-wrapper').width();
 
         var ptable_grid = $('.ptable');
         offset = ptable_grid.offset()
