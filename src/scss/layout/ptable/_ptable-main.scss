@@ -19,7 +19,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        height: $period-group__thickness;
+        height:2 * $period-group__thickness;
         width: $period-group__thickness;
         background: $priod-grup__base-bg;
         z-index: 100;
@@ -37,17 +37,18 @@
     .ptable-periods-wrapper {
         bottom: 0;
         left: 0;
-        height: calc(100% - #{$period-group__thickness});
+        height: calc(100% - #{2 * $period-group__thickness});
         width: $period-group__thickness;
         box-shadow: $period-group__period-shadow;
         z-index: 100;
 
         .ptable-periods {
             position: absolute;
-            top: ($table_wrapper_height - $table_height)/2 - $period-group__thickness;
+            top: ($table_wrapper_height - $table_height)/2 - (2 * $period-group__thickness); //2* because now groups wrapper is 2 times thicker
             left: 0;
             width: 100%;
             height: $table-actual-height;
+            transform: unset;
             display: flex;
             flex-direction: column;
 
@@ -115,7 +116,25 @@
                 &__info-2{
                     background: $period-group-group-info-2-bg;
                     transition: background .2s;
+                    position:relative;
+                    overflow:hidden;
+
+                    // &::before{
+                    //     content: '';
+                    //     position:absolute;
+                    //     top:-4px;
+                    //     left:-4px;
+                    //     height:8px;
+                    //     width:8px;
+                    //     background:rgb(0, 0, 0);
+                    //     transform: rotate(45deg)
+                    // }
+
                 }
+                
+                // .info2-8,.info2-9,.info2-10{
+                //     background:rgb(31, 32, 43) !important;
+                // }
 
                 &:nth-child(odd) {
                     background: $period-group__content--odd-bg;

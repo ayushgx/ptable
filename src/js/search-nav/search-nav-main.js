@@ -107,8 +107,6 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
         } 
     })
 
-
-
     //============================================================================
     // removes nav when clicked outside body
     $('body').on('click', function (event) {

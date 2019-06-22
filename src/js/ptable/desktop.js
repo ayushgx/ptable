@@ -3,16 +3,8 @@ if (!is_touch_device()) {
     var viewport = document.querySelector(".ptable-wrapper__ptable");
     var content = document.querySelector(".inner-scroll-wrapper");
 
-    var groups = document.querySelector(".ptable-groups");
-    var periods = document.querySelector(".ptable-periods");
-
-    var period_group_size = $('.ptable-periods-wrapper').width();
-    var top_bar_height = $('.top-bar').height();
-
-    var ptable_grid = $('.ptable');
-    offset = ptable_grid.offset()
-    ptableOffsetTop = offset.top - $(document).scrollTop();
-    ptableOffsetLeft = offset.left - $(document).scrollLeft();
+    var groups = $(".ptable-groups");
+    var periods = $(".ptable-periods");
 
     var sb = new ScrollBooster({
       viewport: viewport,
@@ -23,20 +15,17 @@ if (!is_touch_device()) {
       friction: 0.14,
       emulateScroll: true,
 
-      onUpdate: function (data) {
 
-        content.scrollLeft = data.position.x;
-        content.scrollTop = data.position.y;
+      onUpdate: function (data) {
+        content.scrollLeft = data.position.x ;
+        content.scrollTop = data.position.y ;
+
+        // console.log(-data.position.x.toFixed(2) ,-data.position.y.toFixed(2) )
 
         content.style.transform = `translate(${-data.position.x}px,  ${-data.position.y}px)`;
 
-        let ptable_grid = $('.ptable');
-        offset = ptable_grid.offset()
-        ptableOffsetTop = offset.top - $(document).scrollTop();
-        ptableOffsetLeft = offset.left - $(document).scrollLeft();
-
-        groups.style.left = (ptableOffsetLeft - period_group_size) + "px";
-        periods.style.top = (ptableOffsetTop - period_group_size - top_bar_height) + "px";
+        groups.css('transform', `translateX(${-data.position.x}px )`);
+        periods.css('transform', `translateY(${-data.position.y}px )`);
 
       },
     });

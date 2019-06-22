@@ -1166,13 +1166,13 @@ var theme_id_to_cat_name = {
     'O': 'all_items'
 }
 
-var yoyo = ['IA','IIA','IIIB','IVB','VB','VIB','VIIB','VIIIB','VIIIB','VIIIB','IB','IIB','IIIA','IVA','VA','VIA','VIIA','VIIIA'];
+var periods_info_2_data = ['IA','IIA','IIIB','IVB','VB','VIB','VIIB','VIIIB','VIIIB','VIIIB','IB','IIB','IIIA','IVA','VA','VIA','VIIA','VIIIA'];
 
 $(document).ready(function () {
 
     // injecting periods/groups numbers
     // for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '">' + i + '</div>');
-    for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '"><div class="group__info-1">'+ i +'</div><div class="group__info-2">'+ yoyo[i-1] +'</div></div>');
+    for (var i = 1; i <= 18; i++) $('.ptable-groups').append('<div class="group group-' + i + '"><div class="group__info-1">'+ i +'</div><div class="group__info-2 info2-'+i+'">'+ periods_info_2_data[i-1] +'</div></div>');
 
     for (var i = 1; i <= 8; i++) $('.ptable-periods').append('<div class="period period-' + i + '">' + i + '</div>');
 
