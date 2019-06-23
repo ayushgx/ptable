@@ -15,8 +15,6 @@
     "src\\js\\scrollbars-manager.js": true,
     "src\\js\\preloader.js": true,
     "src\\scss\\abstracts": true,
-    "src\\scss\\layout\\_layout.scss": true,
-    "src\\scss\\variables\\_variables.scss": true,
     "src\\scss\\info.txt": true,
     ".browserslistrc": true,
     ".gitignore": true,

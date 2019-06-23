@@ -13,7 +13,7 @@ lanthanides,actinides,auperactinides, tags (thinking of a possible way...)
 4) controls with fixed position just like rounded social share buttons
 5) tooltips just like wikipedia... probably with image
 6) create a material design intro like we see in mordern android applications
-7) create welcome modal with animated objects bakground (already have)
+7) create welcome modal with animated objects bakground (already have) with option to start a tour (upper point)
 8) create a context menu just like BeMusic
 
 //other considerations:
@@ -21,8 +21,16 @@ if window inner width is > than the width of the periodic table then ptable oute
 
 OPTIMISATIONS:
  => dynamically add that nuclear icon in the ptable element instead of pushing it in all the elements
- => FOLLOW THE DELAY PRINCIPLE WHILE ANIMATING THE SEARCH NAV by adding little delay between the animations instead of doing all the animations at the same time...
+.
+.
+.
+.
+.
+.
+.
+.
 
-=====================================//  DONE!!!  //===================================================
+=====================================//  DONE!!!  //=======================================================================================================================================================================================
 ADD 1A2A,... TO THE PERIODS...
-[IA,IIA,IIIB,IVB,VB,VIB,VIIB,VIIIB,VIIIB,VIIIB,IB,IIB,IIIA,IVA,VA,VIA,VIIA,VIIIA]
+[IA,IIA,IIIB,IVB,VB,VIB,VIIB,VIIIB,VIIIB,VIIIB,IB,IIB,IIIA,IVA,VA,VIA,VIIA,VIIIA] 
+=> FOLLOW THE DELAY PRINCIPLE WHILE ANIMATING THE SEARCH NAV by adding little delay between the animations instead of doing all the animations at the same time...

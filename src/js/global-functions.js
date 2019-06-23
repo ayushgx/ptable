@@ -5,7 +5,6 @@ const IS_FIREFOX = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
 /* function to attach and remove overlay from a particular element
    ===============================================================
-    * adds an '#overlay' element as the parent of the passed element
     * duration is the transition time of the overly
     * background is the background color of the overlay with default passed
     * passed element must have z-index specified to fully prevent any abnormal behaviours
@@ -56,6 +55,7 @@ function remove_overlay_and_blur(duration, element) {
 //==================================================================================================================
 //function that return bool whether we clicked outside a particular element or not
 // * used for closing the nav when clicked outside
+// * this function should only be used in the click function of the body elements
 function clicked_outside(element) {
     return (!$(event.target).closest(element).length)
 }

@@ -44,7 +44,7 @@ $(document).ready(function () {
 	})
 
 	// $('.top-bar').click(function () {
-	// 	disable_elements_except('lanthanides', 'halogens')
+	// 	$('.general-nav').toggleClass('active');
 	// });
 
 

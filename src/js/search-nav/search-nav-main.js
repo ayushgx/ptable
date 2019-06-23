@@ -92,7 +92,7 @@ $(document).ready(function () {
     //============================================================================
     // removes nav when clicked outside body
     $('body').on('click', function (event) {
-        if (clicked_outside('.search-nav') && clicked_outside('.aa') && $('.search-nav').hasClass('active')) {
+        if (clicked_outside('.search-nav') && $('.search-nav').hasClass('active')) {
             // console.log('lmoa')
             // ... clicked on the 'body', but not inside of search-nav and green-btn (.aa)
             close_search_nav()
