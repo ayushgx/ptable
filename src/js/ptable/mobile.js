@@ -1,15 +1,15 @@
 if (is_touch_device()) {
     $(document).ready(function () {
 
-        var groups = $(".ptable-groups");
-        var periods = $(".ptable-periods");
+        let groups = $(".ptable-groups");
+        let periods = $(".ptable-periods");
 
-        var ptable_grid = $('.ptable');
+        let ptable_grid = $('.ptable');
 
-        var ptable_base_offset_left = ptable_grid.offset().left
-        var ptable_base_offset_top = ptable_grid.offset().top
+        let ptable_base_offset_left = ptable_grid.offset().left
+        let ptable_base_offset_top = ptable_grid.offset().top
 
-        $('.ptable-wrapper__ptable').scroll(function () {
+        $('.ptable-wrapper__ptable').scroll(function() {
             ptable_current_offset = ptable_grid.offset() 
 
             ptableOffsetTop = ptable_current_offset.top - ptable_base_offset_top;
@@ -22,7 +22,7 @@ if (is_touch_device()) {
 
         //in mobile we do not use scrollbooster therefore, we do not need special click function
         $('.ptable-element').each(function (index, obj) {
-            $(this).click(function () {
+            $(this).click(function() {
                 // if(!$(this).hasClass('disabled'))
                 // alert($(this).find('.ptable-element__element-name').text());
             })

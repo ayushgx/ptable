@@ -38,23 +38,27 @@ if (!is_touch_device()) {
     //prevent click while dragging ptable
     //idea is to find initial and final position of mouse during mousedown and mouseup events;
     //if there is no significance difference b/w positions then simply register the click.
-    const drag_click_threshold = 5;
-    $('.ptable-element').each(function (index, obj) {
-      let ptable_element = $(obj);
+    const DRAG_CLICK_THRESHOLD = 5;
+
+    let ptable_element;
+    $('.ptable-element').each(function(index, obj){
+      ptable_element = $(obj);
       let x1, y1, x2, y2;
-      ptable_element.mousedown(function (e) {
-        x1 = e.pageX;
-        y1 = e.pageY;
-        // alert($(this).find('.ptable-element__element-name').text());
-      })
-      ptable_element.mouseup(function (e) {
-        x2 = e.pageX;
-        y2 = e.pageY;
-        // console.log('diff', 'x', Math.abs(x1 - x2), 'y', Math.abs(y1 - y2))
-        if (Math.abs(x1 - x2) <= drag_click_threshold && Math.abs(y1 - y2) <= drag_click_threshold && !ptable_element.hasClass('disabled')) {
+      ptable_element.mousedown(function(e) {
+          x1 = e.pageX;
+          y1 = e.pageY;
           // alert($(this).find('.ptable-element__element-name').text());
-        }
-      })
+        })
+        .mouseup(function(e) {
+          e.preventDefault();
+          x2 = e.pageX;
+          y2 = e.pageY;
+          // console.log('diff', 'x', Math.abs(x1 - x2), 'y', Math.abs(y1 - y2))
+          if (Math.abs(x1 - x2) <= DRAG_CLICK_THRESHOLD && Math.abs(y1 - y2) <= DRAG_CLICK_THRESHOLD && !ptable_element.hasClass('disabled')) {
+            console.log($(obj).find('.ptable-element__element-name').text());
+          }
+        })
     })
+
   })
 }

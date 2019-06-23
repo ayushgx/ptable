@@ -1,22 +1,5 @@
 $(document).ready(function () {
 
-const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duration')) * 1000;
-//====================================================================
-//function to open and close search-nav
-    function open_search_nav(){
-        attach_overlay('.search-nav', search_nav_trans_dur)
-        $('.ptable-and-top-bar-wrapper').css('filter', 'blur(5px)')
-        // $('.ptable-and-top-bar-wrapper').css('overflow', 'hidden')
-        $('.search-nav').addClass('active');
-    }
-    function close_search_nav(){
-        $('.search-nav').removeClass('active');
-        $('.ptable-and-top-bar-wrapper').css('filter', 'blur(0px)')
-        remove_overlay('.search-nav', search_nav_trans_dur)
-    }
-//====================================================================
-
-
     //that green box at the top left
     $('#button-search').click(function (e) {
         e.stopPropagation();
@@ -92,19 +75,18 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
 
     //===========================================================================
     //handles the hilight feature in the search nav
-    $('.element-categories__item').click(function(){
+    $('.element-categories__item').click(function () {
         // console.log($(this).find('.element-categories__item-name').text().replace(/\-/g, '_').replace(/\ /g,'_').toLowerCase())
-        var parameter = $(this).find('.element-categories__item-name').text().replace(/\-/g, '_').replace(/\ /g,'_').toLowerCase();
+        var parameter = $(this).find('.element-categories__item-name').text().replace(/\-/g, '_').replace(/\ /g, '_').toLowerCase();
         var category_color = $(this).find('.element-categories__item-color').css('background-color')
         console.log(category_color)
-        if(parameter=='all_items'){
+        if (parameter == 'all_items') {
             all_elements_task('enable')
             $('.group__info-2').css('border-bottom', 'none')
-        }
-        else{
+        } else {
             disable_elements_except(parameter) //function found in the functions.js
-            $('.group__info-2').css('border-bottom', '2px solid '+category_color)
-        } 
+            $('.group__info-2').css('border-bottom', '2px solid ' + category_color)
+        }
     })
 
     //============================================================================
@@ -116,7 +98,7 @@ const search_nav_trans_dur = parseFloat($('.search-nav').css('transition-duratio
             close_search_nav()
         }
     });
-    
+
     // alternate code
     // $('body').click(function(){
     //     if($('.search-nav').hasClass('active')) console.log('lmoa')

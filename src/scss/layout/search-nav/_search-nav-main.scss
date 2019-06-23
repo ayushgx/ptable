@@ -7,7 +7,7 @@
     width: $search-nav-width;
     z-index: 1000;
     height: 100%;
-    transition: .38s right cubic-bezier(0.4, 0, 0.2, 1);
+    transition: .34s right cubic-bezier(0.4, 0, 0.2, 1);
     // transition:.32s right cubic-bezier(0.49, 0.01, 0.06, 0.99);
 
     @media only screen and (max-width: $mq-search-nav) {

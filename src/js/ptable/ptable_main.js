@@ -5,6 +5,13 @@ function is_touch_device() {
 }
 $(document).ready(function () {
 
+	// added delay for performance improvement
+	var trans_delay = 0;
+	$('.ptable-element').each(function(){
+		$(this).css('transition-delay', `${trans_delay}s`)
+		trans_delay+=0.0018;
+	})
+
 	//enables only the given class name as argument
 	function period_group_highlighter(val) {
 		var element = $(val).find('.ptable-element,:not(.special-container)');

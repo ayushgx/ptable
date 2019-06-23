@@ -21,7 +21,7 @@ if window inner width is > than the width of the periodic table then ptable oute
 
 OPTIMISATIONS:
  => dynamically add that nuclear icon in the ptable element instead of pushing it in all the elements
-
+ => FOLLOW THE DELAY PRINCIPLE WHILE ANIMATING THE SEARCH NAV by adding little delay between the animations instead of doing all the animations at the same time...
 
 =====================================//  DONE!!!  //===================================================
 ADD 1A2A,... TO THE PERIODS...

@@ -10,6 +10,7 @@ var runSequence = require('gulp4-run-sequence');
 var rcs = require('gulp-rcs');//scramble names
 var beautify = require('gulp-beautify');
 var htmlmin = require('gulp-htmlmin');
+var gs = require('gulp-selectors');
 
 gulp.task('clean:dist', function(cb){
     return (del.sync('dist'), cb());
@@ -65,6 +66,15 @@ gulp.task('minify-html', function(){
      }))
     .pipe(gulp.dest('dist'))
 })
+
+// gulp.task('gs', function(){
+//     return gulp.src(["dist/**/*.css","dist/**/*.js","dist/**/*.html"])
+//     .pipe(gs.run({
+//         'js-strings': ['js']
+//     }))
+//     .pipe(gs.info())
+//     .pipe(gulp.dest("dist"))
+// })
 
 gulp.task('build', function(callback){
     runSequence(

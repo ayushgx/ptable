@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "Most Interactive Periodic Table ",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "munch": "munch --css dist\\css\\style.min.css --view dist\\index.html --js dist\\js\\main.min.js --show-savings"
+  },
   "keywords": [
     "periodic",
     "table"
   ],
   "author": "Ayush Gupta",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-selectors": "^0.1.10"
+  },
   "devDependencies": {
     "del": "^4.1.1",
     "gulp": "^4.0.2",
