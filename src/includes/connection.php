@@ -1,8 +1,8 @@
 <?php 
 
-$host='localhost';
-$db='periodic_table';
-$user='root';
+$host='';
+$db='';
+$user='';
 $pass='';
 $charset='utf8mb4';
 

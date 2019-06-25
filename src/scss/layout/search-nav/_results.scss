@@ -28,7 +28,7 @@
     }
 
     &__skeleton-loader.show {
-        display: none; //just reset/ or to prevent any misbehaviour even if user adds the 'show' class
+        display: flex; //just reset/ or to prevent any misbehaviour even if user adds the 'show' class
     }
 
     &__no-result {

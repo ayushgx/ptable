@@ -1232,14 +1232,10 @@ $(document).ready(function () {
         }
     })
 
-    //injecting special content boxes for lanthanoids,actinoids,superactinoid
-    var special_container_html = '<div class="ptable-element special-container"><div class="range">57-71</div><div class="label">La-Lu</div></div>';
-    $('#element_92').append(special_container_html);
-    var special_container_html = '<div class="ptable-element special-container"><div class="range">89-103</div><div class="label">Ac-Lr</div></div>';
-    $('#element_110').append(special_container_html);
-    var special_container_html = '<div class="ptable-element special-container"><div class="range">121-126</div><div class="label">Ubu-Ubh</div></div>';
-    $('#element_128').append(special_container_html);
-
+    //injecting special content boxes for lanthanoids,actinoids,superactinoids
+    $('#element_92').append('<div class="ptable-element special-container"><div class="range">57-71</div><div class="label">La-Lu</div></div>');
+    $('#element_110').append('<div class="ptable-element special-container"><div class="range">89-103</div><div class="label">Ac-Lr</div></div>');
+    $('#element_128').append('<div class="ptable-element special-container"><div class="range">121-126</div><div class="label">Ubu-Ubh</div></div>');
     $('#element_92, #element_110, #element_128').css("opacity", '1').ripple();
 
     //ptable ends===============================================================

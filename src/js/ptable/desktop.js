@@ -15,7 +15,6 @@ if (!is_touch_device()) {
       friction: 0.14,
       emulateScroll: true,
 
-
       onUpdate: function (data) {
         content.scrollLeft = data.position.x ;
         content.scrollTop = data.position.y ;
@@ -62,3 +61,6 @@ if (!is_touch_device()) {
 
   })
 }
+
+
+//agupta73046

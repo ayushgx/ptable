@@ -13,6 +13,7 @@
   "author": "Ayush Gupta",
   "license": "ISC",
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "gulp-selectors": "^0.1.10"
   },
   "devDependencies": {

@@ -20,7 +20,22 @@ $mq-search-nav: 800px;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 73%;
+
+  @media (max-width:1700px) {
+    font-size: 72%;
+  }
+
+  @media (max-width:1600px) {
+    font-size: 70%;
+  }
+
+  @media (max-width:1400px) {
+    font-size: 65.5%;
+  }
+  @media (max-width:1200px) {
+    font-size: 62.5%;
+  }
 
   @media (max-width:430px) {
     font-size: 57%;
